@@ -17,21 +17,13 @@ MxMatrix is a web-based application designed for mechanical keyboard enthusiasts
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack Details...
 
 - **React.js** for the frontend
 - **React Router** for navigation
-- **CSS Modules** for component-specific styling
 - **JavaScript** for state and logic
+- **CSS Modules** for component-specific styling
+- **Entity Framework Core** ORM for database access
 
 ---
 
-## 🚀 Getting Started
-
-To run the project locally:
-
-```bash
-git clone https://github.com/timwalkercs/MxMatrix.git
-cd MxMatrix
-npm install
-npm start
