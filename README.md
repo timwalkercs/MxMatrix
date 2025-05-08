@@ -1,5 +1,4 @@
-![Screenshot of MxMatrix](assets/galleryscreenshot.png)
-
+![Screenshot of MxMatrix](assets/FullLogo.png)
 
 # MxMatrix 🧠⌨️
 
@@ -14,7 +13,8 @@ MxMatrix is a web-based application designed for mechanical keyboard enthusiasts
 - Detailed **switch information pages**
 - Expandable material filter with smart checkbox memory
 - Intuitive and clean user interface
-
+![Screenshot of MxMatrix](assets/galleryscreenshot.png)
+![Screenshot of MxMatrix](assets/switchdetailsview.png)
 ---
 
 ## 🛠 Tech Stack Details...
