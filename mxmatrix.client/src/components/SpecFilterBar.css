@@ -1,0 +1,106 @@
+/* Filters.css */
+.rightfilters {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    background-color: white;
+    color: black;
+}
+
+    .rightfilters h3 {
+        text-align: right;
+        margin-bottom: 0.5rem;
+        color: black;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .rightfilters h4 {
+        text-align: right;
+        margin-bottom: 0.1rem;
+        color: black;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .rightfilters h5 {
+        text-align: right;
+        margin-bottom: 0.1rem;
+        color: black;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .rightfilters label {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: black;
+        font-size: small;
+        text-align: right;
+    }
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.expandcollapse {
+    margin-top: -5px;
+    font-size: small;
+    opacity: 0.75;
+}
+
+.dropdown {
+    text-align: right;
+}
+
+.dropdown-toggle {
+    text-align: right;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    text-align: right;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-y: auto;
+}
+    .dropdown-menu p {
+        margin-bottom: -1rem;
+        font-size: small;
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+.range-filter {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+    .range-filter h4 {
+        text-decoration: underline;
+        margin-bottom: 0.3rem;
+    }
+
+.range-inputs {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+    .range-inputs input {
+        width: 4rem;
+        padding: 0.2rem;
+        font-size: small;
+    }

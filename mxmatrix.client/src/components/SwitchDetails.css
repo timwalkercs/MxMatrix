@@ -1,0 +1,117 @@
+.page-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding-top: 4rem;
+    text-align: center; /* Center the header text */
+}
+    .page-container h1 {
+        color: black;
+        margin-bottom: 30px;
+        font-weight: normal;
+        font-size: xx-large;
+    }
+
+.switch-card {
+    display: flex;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    color: black;
+}
+
+.switch-image {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+    .switch-image img {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+    }
+
+.switch-info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+    .switch-info h2 {
+        margin: 0 0 1rem 0;
+    }
+
+    .switch-info p {
+        margin: 0.4rem 0;
+    }
+
+.switch-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+    .switch-table thead th {
+        background-color: #f3f3f3;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    .switch-table td {
+        padding: 0.5rem 1rem;
+        text-align: left;
+        line-height: 1;
+    }
+        .switch-table td:nth-child(2) {
+            text-align: center;
+        }
+
+    .switch-table tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    .switch-table tbody tr:nth-child(even) {
+        background-color: #f8f8f8;
+    }
+
+@media (max-width: 768px) {
+    .switch-card {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .switch-image {
+        padding: 1rem 0;
+    }
+
+        .switch-image img {
+            max-width: 80%;
+        }
+
+    .switch-info {
+        padding: 1rem;
+    }
+
+    .switch-table {
+        font-size: 0.9rem;
+    }
+
+        .switch-table thead th {
+            font-size: 1rem;
+        }
+}

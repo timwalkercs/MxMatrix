@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "UGq88OJ65oYoAn3Y5iYRQIyr2YOoL33k6TCotP+HEcA=",
+  "Source": "MxMatrix.Server",
+  "BasePath": "_content/MxMatrix.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\mxmatrix.client.esproj",
+      "Version": 2,
+      "Source": "mxmatrix.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,80 @@
+.gallerydiv {
+    padding-top: 4rem;
+}
+
+.gallerydiv h1 {
+    color: black;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: xx-large;
+}
+
+.grid {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, auto));
+    gap: 1rem;
+    justify-content: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+.leftfilter {
+    width: 300px; 
+    flex-shrink: 0;
+    position: absolute;
+}
+
+.rightfilter {
+    width: 300px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 10px;
+}
+
+
+.card {
+    background: white;
+    color: black;
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    margin: 20px;
+    cursor: pointer;
+}
+
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+
+    .card img {
+        width: 75%;
+        height: auto;
+    }
+
+    .card * {
+        margin: 0px;
+        text-wrap: pretty;
+        text-align: start;
+    }
+
+    .card h4 {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .card p {
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+#brand {
+    text-decoration: underline;
+}

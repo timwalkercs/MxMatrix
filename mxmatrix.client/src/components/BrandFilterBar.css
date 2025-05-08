@@ -1,0 +1,31 @@
+/* Filters.css */
+.filters {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+    .filters h4 {
+        margin-bottom: 0.5rem;
+        color: black;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .filters label {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: black;
+        font-size: small;
+    }
+
+    .filters h3 {
+        text-align: left;
+        margin-bottom: 0.5rem;
+        color: black;
+        font-weight: normal;
+        text-decoration: underline;
+    }
