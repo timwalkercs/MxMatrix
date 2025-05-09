@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 6rem 1rem 6rem 1rem;
 }
 
     .switch-info h2 {
@@ -73,11 +73,14 @@
     }
 
     .switch-table td {
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 1rem;
         text-align: left;
         line-height: 1;
     }
-        .switch-table td:nth-child(2) {
+        .switch-table td:nth-child(1){
+            white-space: nowrap;
+        }
+        .switch-table td:nth-child(2){
             text-align: center;
         }
 
@@ -115,3 +118,36 @@
             font-size: 1rem;
         }
 }
+
+
+.tooltip {
+    white-space: normal;
+    position: relative;
+    display: inline-block;
+    margin: 0 1px;
+    text-decoration: none;
+    color: grey;
+    cursor: help;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 400px;
+        background-color: black;
+        color: white;
+        text-align: left;
+        border-radius: 1px;
+        border-style: solid;
+        padding: 10px;
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
