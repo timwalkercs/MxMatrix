@@ -1,6 +1,6 @@
 ![Screenshot of MxMatrix](assets/FullLogo.png)
 
-# MxMatrix 🧠⌨️
+# MxMatrix ⌨️
 
 MxMatrix is a web-based application designed for mechanical keyboard enthusiasts to explore, filter, and view detailed information about mechanical keyboard switches. Whether you're building a custom board or researching switch specs, MxMatrix makes it easy to find the right switch for your needs.
 
@@ -23,6 +23,7 @@ MxMatrix is a web-based application designed for mechanical keyboard enthusiasts
 - **React Router** for navigation
 - **JavaScript** for state and logic
 - **CSS Modules** for component-specific styling
+- **ASP.NET Core** backend API controllers
 - **Entity Framework Core** ORM for database access
 
 ---
