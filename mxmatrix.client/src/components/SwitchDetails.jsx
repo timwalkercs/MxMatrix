@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './SwitchDetails.css';
+import ForceComparisonBar from '../components/ForceComparisonBar';
+import TravelComparisonBar from '../components/TravelComparisonBar';
 
 function SwitchDetail() {
     const { id } = useParams();
@@ -38,9 +40,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Type
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 <strong>Linear</strong> switches provide a smooth keystroke. <br></br><br></br> <strong>Tactile</strong> switches differ from linear switches in that there is a noticeable "bump" in the keystroke, often at the actuation point. <br></br><br></br> <strong>Clicky</strong> switches have the same tactile bump, but also have a distinct, audible, click that comes from an additional mechanism not present in linears/tactiles.
                                             </span>
                                         </div>
@@ -62,9 +64,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Stem Construction
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 Some stems are made with an enclosure around them that minimizes stem-wobble, increases grip on the keycaps, and prevents dust from getting inside the mechanism.
                                             </span>
                                         </div>
@@ -78,9 +80,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Mount Type
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 3-pin switches offer the most compatibility with keyboard PCBs while 5-pin switches allow for the most secure mounting experience. If your PCB only has 3 pin slots, clipping the additional plastic pins on 5-pin switches is a simple workaround.
                                             </span>
                                         </div>
@@ -90,9 +92,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Actuation Force
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 The force required to actuate the switch. This is affected by the spring which can vary in length, weight, and number of stages.
                                             </span>
                                         </div>
@@ -102,9 +104,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Bottom-Out Force
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 The force required to bottom-out the switch. Some people prefer heavier spring weights to prevent bottoming out for a 'floaty' typing feel.
                                             </span>
                                         </div>
@@ -114,9 +116,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Pre-Travel
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 The distance the stem needs to travel in order for the switch to actuate. A lower number typically means quicker response time.
                                             </span>
                                         </div>
@@ -127,9 +129,9 @@ function SwitchDetail() {
                                 <tr>
                                     <td>
                                         Total Travel
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 The total distance the stem travels before it bottoms out. Stems with longer poles and switches with dampeners often have a shorter total travel. Bottoming out on the pole, with no dampeners, creates a sharper typing feel leads to a clackier sound profile. <br></br><br></br><i>The standard total travel distance is 4.0mm.</i>
                                             </span>
                                         </div>
@@ -142,9 +144,9 @@ function SwitchDetail() {
                                 </tr>
                                 <tr>
                                     <td>Silent
-                                        <div class="tooltip">
+                                        <div className="tooltip">
                                             &#x1F6C8;
-                                            <span class="tooltiptext">
+                                            <span className="tooltiptext">
                                                 Silent switches achieve their quiet operation by utilizing dampening materials like rubber or silicone to absorb the vibrations and reduce the sound of keystrokes. This is primarily done by adding dampeners on the switch stem, rails, or housings. <br></br><br></br><i>These dampeners can shorten travel distance and create a 'mushy' feel.</i>
                                             </span>
                                         </div>
@@ -159,6 +161,9 @@ function SwitchDetail() {
                         </table>
                     </div>
                 </div>
+
+                <ForceComparisonBar currentForce={switchData.bottomOutForce} />
+                <TravelComparisonBar currentTotalTravel={switchData.totalTravel} />
             </div>
         </div>
     );

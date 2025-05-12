@@ -98,5 +98,23 @@ namespace MxMatrix.Data.Controllers
             return Ok(descriptors);
         }
 
+        [HttpGet("bottomout-range")]
+        public async Task<IActionResult> GetBottomOutForceRange()
+        {
+            var min = await _context.Switches.MinAsync(s => s.BottomOutForce);
+            var max = await _context.Switches.MaxAsync(s => s.BottomOutForce);
+
+            return Ok(new { min, max });
+        }
+
+        [HttpGet("totaltravel-range")]
+        public async Task<IActionResult> GetTotalTravelRange()
+        {
+            var min = await _context.Switches.MinAsync(s => s.TotalTravel);
+            var max = await _context.Switches.MaxAsync(s => s.TotalTravel);
+
+            return Ok(new { min, max });
+        }
+
     }
 }
