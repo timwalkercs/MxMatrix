@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\timot\\source\\repos\\MxMatrix\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +34,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MxMatrix.Server",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\.gitignore",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\.gitignore",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\.gitignore",
+              "RelativeToolTip": "MxMatrix.Server\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-05-15T21:46:10.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MxMatrix.Server.csproj",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\MxMatrix.Server.csproj",
               "RelativeDocumentMoniker": "MxMatrix.Server\\MxMatrix.Server.csproj",
               "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\MxMatrix.Server.csproj",
               "RelativeToolTip": "MxMatrix.Server\\MxMatrix.Server.csproj",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-15T21:27:03.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T21:27:03.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Program.cs",
               "RelativeDocumentMoniker": "MxMatrix.Server\\Program.cs",
@@ -51,12 +67,11 @@
               "RelativeToolTip": "MxMatrix.Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T20:33:09.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T20:33:09.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\appsettings.Development.json",
               "RelativeDocumentMoniker": "MxMatrix.Server\\appsettings.Development.json",
@@ -64,8 +79,7 @@
               "RelativeToolTip": "MxMatrix.Server\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-14T23:33:51.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T23:33:51.078Z"
             }
           ]
         }

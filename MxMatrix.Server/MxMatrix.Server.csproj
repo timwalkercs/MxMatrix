@@ -34,18 +34,18 @@
   </ItemGroup>
 
 
-  <Target Name="BuildReactApp" AfterTargets="Publish">
-    <Exec Command="npm install" WorkingDirectory="$(SpaRoot)" />
-    <Exec Command="npm run build" WorkingDirectory="$(SpaRoot)" />
+	<Target Name="BuildReactApp" AfterTargets="Publish">
+		<Exec Command="npm install" WorkingDirectory="$(SpaRoot)" />
+		<Exec Command="npm run build" WorkingDirectory="$(SpaRoot)" />
 
-    <ItemGroup>
-      <DistFiles Include="$(SpaRoot)/dist/**" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')"
-                             Exclude="**/node_modules/**">
-        <RelativePath>wwwroot/%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      </ResolvedFileToPublish>
-    </ItemGroup>
-  </Target>
+		<ItemGroup>
+			<DistFiles Include="$(SpaRoot)/dist/**/*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(DistFiles)"
+			  DestinationFiles="@(DistFiles->'$(PublishDir)wwwroot/%(RecursiveDir)%(Filename)%(Extension)')"
+			  SkipUnchangedFiles="true" />
+	</Target>
+
 
 </Project>

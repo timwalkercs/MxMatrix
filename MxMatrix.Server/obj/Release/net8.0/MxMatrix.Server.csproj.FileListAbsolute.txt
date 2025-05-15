@@ -174,3 +174,9 @@ C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Release\net8.0\refint\M
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Release\net8.0\MxMatrix.Server.pdb
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Release\net8.0\MxMatrix.Server.genruntimeconfig.cache
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Release\net8.0\ref\MxMatrix.Server.dll
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Release\net8.0\publish\web.config
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Release\net8.0\publish\appsettings.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Release\net8.0\publish\MxMatrix.Server.deps.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Release\net8.0\publish\MxMatrix.Server.runtimeconfig.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Release\net8.0\publish\MxMatrix.Server.staticwebassets.endpoints.json

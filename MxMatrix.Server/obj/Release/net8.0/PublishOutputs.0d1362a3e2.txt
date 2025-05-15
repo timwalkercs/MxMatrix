@@ -1,6 +1,12 @@
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\MxMatrix.Server.exe
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\publish\web.config
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\appsettings.Development.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\appsettings.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\publish\appsettings.Development.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\publish\appsettings.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\publish\MxMatrix.Server.deps.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\publish\MxMatrix.Server.runtimeconfig.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\publish\MxMatrix.Server.staticwebassets.endpoints.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\MxMatrix.Server.dll
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\MxMatrix.Server.runtimeconfig.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\publish\MxMatrix.Server.pdb
