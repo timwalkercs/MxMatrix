@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:64199",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\..\\mxmatrix.client\\",
+"WorkingDirectory": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\../mxmatrix.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

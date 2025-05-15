@@ -4,14 +4,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <SpaRoot>..\mxmatrix.client\</SpaRoot> <!-- added slash at end -->
+    <SpaRoot>../mxmatrix.client</SpaRoot> <!-- Change backslashes to forward slashes for cross platform compat. -->
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:64199</SpaProxyServerUrl>
     <SpaStaticFilesOutputPath>dist</SpaStaticFilesOutputPath> <!-- added line -->
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\mxmatrix.client\mxmatrix.client.esproj">
+    <ProjectReference Include="../mxmatrix.client/mxmatrix.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <Folder Include="Repositories/" />
   </ItemGroup>
 
 
@@ -41,8 +41,8 @@
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)/dist/**" />
       <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')"
-                             Exclude="**\node_modules\**">
-        <RelativePath>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+                             Exclude="**/node_modules/**">
+        <RelativePath>wwwroot/%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </ResolvedFileToPublish>
     </ItemGroup>
