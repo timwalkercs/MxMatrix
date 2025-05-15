@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\timot\\source\\repos\\MxMatrix\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\mxmatrix.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\mxmatrix.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MxMatrix.Server.http",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\MxMatrix.Server.http",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\MxMatrix.Server.http",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\MxMatrix.Server.http",
+              "RelativeToolTip": "MxMatrix.Server\\MxMatrix.Server.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-15T20:53:57.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Program.cs",
               "RelativeDocumentMoniker": "MxMatrix.Server\\Program.cs",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\appsettings.Development.json",
               "RelativeDocumentMoniker": "MxMatrix.Server\\appsettings.Development.json",
@@ -47,8 +64,7 @@
               "RelativeToolTip": "MxMatrix.Server\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-14T23:33:51.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T23:33:51.078Z"
             }
           ]
         }
