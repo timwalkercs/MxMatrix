@@ -175,3 +175,15 @@ C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\zh-Hans\Mi
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\MxMatrix.Server.sourcelink.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\MxMatrix.Server.runtimeconfig.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\MxMatrix.Server.staticwebassets.endpoints.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\web.config
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\web.config
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\MxMatrix.Server.deps.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\appsettings.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\MxMatrix.Server.deps.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\MxMatrix.Server.runtimeconfig.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\MxMatrix.Server.staticwebassets.endpoints.json
