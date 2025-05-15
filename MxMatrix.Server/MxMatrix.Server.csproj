@@ -4,9 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <SpaRoot>..\mxmatrix.client</SpaRoot>
+    <SpaRoot>..\mxmatrix.client\</SpaRoot> <!-- added slash at end -->
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:64199</SpaProxyServerUrl>
+    <SpaStaticFilesOutputPath>dist</SpaStaticFilesOutputPath> <!-- added line -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,5 +32,20 @@
   <ItemGroup>
     <Folder Include="Repositories\" />
   </ItemGroup>
+
+
+  <Target Name="BuildReactApp" AfterTargets="Publish">
+    <Exec Command="npm install" WorkingDirectory="$(SpaRoot)" />
+    <Exec Command="npm run build" WorkingDirectory="$(SpaRoot)" />
+
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)/dist/**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')"
+                             Exclude="**\node_modules\**">
+        <RelativePath>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
 
 </Project>
