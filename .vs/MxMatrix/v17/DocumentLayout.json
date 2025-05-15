@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\timot\\source\\repos\\MxMatrix\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\travelcomparisonbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\travelcomparisonbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -41,12 +57,63 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\.gitignore",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\.gitignore",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\.gitignore",
+              "RelativeToolTip": "MxMatrix.Server\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-05-15T00:08:35.682Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\appsettings.Development.json",
+              "RelativeToolTip": "MxMatrix.Server\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-14T23:33:51.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\appsettings.json",
+              "RelativeToolTip": "MxMatrix.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-14T19:37:54.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Program.cs",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Program.cs",
+              "RelativeToolTip": "MxMatrix.Server\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwA8AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T19:38:06.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TravelComparisonBar.css",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\TravelComparisonBar.css",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\TravelComparisonBar.css",
@@ -58,20 +125,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "TravelComparisonBar.jsx",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\TravelComparisonBar.jsx",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\TravelComparisonBar.jsx",
               "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\TravelComparisonBar.jsx",
               "RelativeToolTip": "mxmatrix.client\\src\\components\\TravelComparisonBar.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-05-12T22:57:34.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T22:57:34.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ForceComparisonBar.css",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\ForceComparisonBar.css",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\ForceComparisonBar.css",
@@ -83,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "ForceComparisonBar.jsx",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\ForceComparisonBar.jsx",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\ForceComparisonBar.jsx",
@@ -95,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "SwitchDetails.jsx",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\SwitchDetails.jsx",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\SwitchDetails.jsx",
@@ -107,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "SwitchDetails.css",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\SwitchDetails.css",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\SwitchDetails.css",
@@ -119,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "MxSwitchController.cs",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Controllers\\MxSwitchController.cs",
               "RelativeDocumentMoniker": "MxMatrix.Server\\Controllers\\MxSwitchController.cs",
