@@ -1,4 +1,9 @@
 # Ignore appsettings for security
 appsettings.Development.json
+
+# Ignore user-based proj file
 MxMatrix.Server.csproj.user
+
+# Ignore build output
+publish/
 
