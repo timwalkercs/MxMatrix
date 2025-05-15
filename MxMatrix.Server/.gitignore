@@ -1,3 +1,4 @@
 # Ignore appsettings for security
 appsettings.Development.json
+MxMatrix.Server.csproj.user
 
