@@ -2,7 +2,6 @@
 .rightfilters {
     padding: 1rem;
     margin-bottom: 2rem;
-    margin-left: 1rem;
     background-color: white;
     color: black;
 }
@@ -36,19 +35,9 @@
         margin-bottom: 0.2rem;
         color: black;
         font-size: small;
-        text-align: right;    
+        text-align: right;
     }
 
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
 
 .expandcollapse {
     margin-top: -5px;

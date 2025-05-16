@@ -44,8 +44,6 @@
     color: black;
     width: 250px;
     height: 200px;
-    margin: auto;
-    margin: 20px;
 }
 
 a.card-link {
@@ -85,7 +83,6 @@ a.card-link {
 
     .gallery-layout {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        background: none;
     }
 
     .leftfilter,
