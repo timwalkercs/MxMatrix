@@ -5,6 +5,7 @@ import BrandFilterBar from './BrandFilterBar';
 import SpecFilterBar from './SpecFilterBar';
 
 function Gallery() {
+    const [filtersVisible, setFiltersVisible] = useState(false);
     const [switches, setSwitches] = useState([]);
     const [descriptors, setDescriptors] = useState([]);
     const [filteredSwitches, setFilteredSwitches] = useState([]);
@@ -116,41 +117,53 @@ function Gallery() {
         <div className="gallerydiv">
             <h1>Switch Gallery</h1>
 
-            <div className="leftfilter">
-                <BrandFilterBar
-                    brands={brands}
-                    descriptors={descriptors}
-                    onFilterChange={handleFilterChange}
-                />
-            </div>
+            <button
+                className="toggle-filters-button"
+                onClick={() => setFiltersVisible(prev => !prev)}
+            >
+                {filtersVisible ? "Hide Filters" : "Show Filters"}
+            </button>
 
-            <div className="rightfilter">
-                <SpecFilterBar
-                    types={types}
-                    topHousings={topHousings}
-                    bottomHousings={bottomHousings}
-                    stemMaterials={stemMaterials}
-                    onFilterChange={handleFilterChange}
-                    filters={filters}
-                />
-            </div>
+            <div className="gallery-layout">
+                <div className={`leftfilter ${filtersVisible ? '' : 'hidden-filter'}`}>
+                    <BrandFilterBar
+                        brands={brands}
+                        descriptors={descriptors}
+                        onFilterChange={handleFilterChange}
+                    />
+                </div>
 
 
-            <div className="grid">
-                {filteredSwitches.map((sw) => (
-                    <Link to={`/switchdetails/${sw.id}`} key={sw.id} className="card-link">
-                    <div key={sw.id} className="card">
-                        <img src={sw.imageUrl} alt={sw.name} />
-                        <div className="title">
-                            <p id="brand">{sw.brand}</p>
-                            <p>{sw.name}</p>
-                            <p className="type">{sw.type}</p>
+
+                <div className="grid">
+                    {filteredSwitches.map((sw) => (
+                        <div key={sw.id} className="card">
+                            <Link to={`/switchdetails/${sw.id}`} className="card-link">
+                                <img src={sw.imageUrl} alt={sw.name} />
+                            </Link>
+                            <div className="title">
+                                <Link to={`/switchdetails/${sw.id}`} className="card-link">
+                                    <p id="brand">{sw.brand}</p>
+                                    <p>{sw.name}</p>
+                                </Link>
+                                <p className="type">{sw.type}</p>
+                            </div>
+
                         </div>
-                    </div>
-                    </Link>
-                ))}
-            </div>
+                    ))}
+                </div>
 
+                <div className={`rightfilter ${filtersVisible ? '' : 'hidden-filter'}`}>
+                    <SpecFilterBar
+                        types={types}
+                        topHousings={topHousings}
+                        bottomHousings={bottomHousings}
+                        stemMaterials={stemMaterials}
+                        onFilterChange={handleFilterChange}
+                        filters={filters}
+                    />
+                </div>
+            </div>
         </div>
     );
 }
