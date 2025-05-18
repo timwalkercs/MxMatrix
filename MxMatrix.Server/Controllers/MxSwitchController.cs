@@ -116,5 +116,43 @@ namespace MxMatrix.Data.Controllers
             return Ok(new { min, max });
         }
 
+        [HttpGet("recent")]
+        public async Task<IActionResult> GetRecentSwitches()
+        {
+            var recent = await _context.Switches
+                .OrderByDescending(s => s.Id)
+                .Take(5)
+                .Select(s => new {
+                    s.Id,
+                    s.Name,
+                    s.Brand,
+                    s.ImageUrl // adjust based on your actual column
+                })
+                .ToListAsync();
+
+            return Ok(recent);
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchSwitches([FromQuery] string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return Ok(new List<object>());
+            }
+
+            query = query.ToLower();
+
+            var results = await _context.Switches
+                .Where(s => (s.Brand + " " + s.Name).ToLower().Contains(query))
+                .OrderBy(s => s.Brand)
+                .Select(s => new { s.Id, s.Brand, s.Name })
+                .Take(10)
+                .ToListAsync();
+
+            return Ok(results);
+        }
+
+
     }
 }

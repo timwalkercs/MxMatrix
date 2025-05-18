@@ -1,0 +1,97 @@
+.homepage {
+    padding: 5rem 1rem;
+    text-align: center;
+    color: black;
+}
+    .homepage h1{
+        padding-top: 2.5rem;
+    }
+    .homepage h2 {
+        font-weight: normal;
+        padding-top: 10rem;
+    }
+    .homepage h4 {
+        font-weight: normal;
+        padding-bottom: 10rem;
+    }
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 1rem 2rem;
+    border-left-style: none;
+    border-right-style: none;
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: black;
+
+    max-width: 300px;
+}
+
+.gallery-button {
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    padding: .75rem 2rem;
+    font-size: 1.2rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.recent-switches {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+    .recent-switches p{
+        font-weight: normal;    
+    }
+
+.recent-card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding-top: 0px;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+    font-size: 1rem;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
