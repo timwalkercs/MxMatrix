@@ -42,14 +42,18 @@ function NavBar() {
         <>
             <nav className="navbar">
                 <div className="nav-contents">
-                    <div className="nav-left"></div>
+                    <div className="nav-left">
+                        <Link to="/gallery">
+                            <p className="nav-button">SWITCHES</p>
+                        </Link>
+                    </div>
                     <div className="nav-center">
                         <Link to="/">
                             <img src={logo} alt="Logo" className="nav-logo" />
                         </Link>
                     </div>
                     <div className="nav-right">
-                        <p className="search-btn" onClick={toggleOverlay}>SEARCH</p>
+                        <p className="nav-button" onClick={toggleOverlay}>SEARCH</p>
                     </div>
                 </div>
             </nav>

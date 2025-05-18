@@ -45,7 +45,11 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
-}
+    transition: all 0.3s ease-in-out;
+    }
+    .gallery-button:hover {
+        transform: scale(1.1);
+    }
 
 .recent-switches {
     display: flex;
