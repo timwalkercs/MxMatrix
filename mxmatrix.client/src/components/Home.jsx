@@ -43,16 +43,18 @@ function Home() {
             </div>
 
             <h2>Recently Added Switches</h2>
-            <div className="recent-switches">
-                {recentSwitches.map(s => (
-                    <Link to={`/switchdetails/${s.id}`} key={s.id} className="recent-card">
-                        <div className="image-wrapper">
-                            <img src={s.imageUrl} alt={`${s.brand} ${s.name}`} />
-                            <div className="overlay">
-                                <p>{s.brand} {s.name}</p>
+            <div className="carousel" mask>
+                {recentSwitches.map((s, idx) => (
+                    <div key={idx} style={{ '--i': idx % recentSwitches.length }}>
+                        <Link to={`/switchdetails/${s.id}`} key={s.id} className="recent-card">
+                            <div className="image-wrapper">
+                                <img src={s.imageUrl} alt={`${s.brand} ${s.name}`} />
+                                <div className="overlay">
+                                    <p>{s.brand} {s.name}</p>
+                                </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 ))}
             </div>
 

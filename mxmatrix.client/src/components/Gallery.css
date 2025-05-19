@@ -63,16 +63,10 @@ a.card-link {
         text-align: start;
     }
 
-    .card h4 {
-        margin-left: 10px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-
     .card p {
         margin-left: 10px;
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: -3px;
     }
 
 #brand {

@@ -91,6 +91,7 @@ namespace MxMatrix.Data.Controllers
             return Ok(result);
         }
 
+        //api/mxswitch
         [HttpGet("descriptors")]
         public async Task<ActionResult<IEnumerable<Descriptor>>> GetDescriptors()
         {
@@ -126,7 +127,7 @@ namespace MxMatrix.Data.Controllers
                     s.Id,
                     s.Name,
                     s.Brand,
-                    s.ImageUrl // adjust based on your actual column
+                    s.ImageUrl
                 })
                 .ToListAsync();
 

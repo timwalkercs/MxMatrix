@@ -51,17 +51,6 @@
         transform: scale(1.1);
     }
 
-.recent-switches {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-    .recent-switches p{
-        font-weight: normal;    
-    }
-
 .recent-card {
     position: relative;
     width: 200px;
@@ -94,8 +83,55 @@
     opacity: 0;
     transition: opacity .15s ease-in-out;
     font-size: 1rem;
+    font-weight: normal;
 }
 
 .image-wrapper:hover .overlay {
     opacity: 1;
+}
+
+.carousel {
+    --items: 5;
+    --carousel-duration: 20s;
+    --carousel-width: min(90vw, 1200px);
+    --carousel-item-width: 240px;
+    --carousel-item-height: 240px;
+    --carousel-item-gap: 2rem;
+    --clr-cta: black;
+    position: relative;
+    width: var(--carousel-width);
+    height: 200px;
+    overflow: clip;
+    display: block;
+    margin: auto;
+    mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
+}
+
+    .carousel > div {
+        position: absolute;
+        top: 0;
+        left: calc(100% + var(--carousel-item-gap));
+        width: var(--carousel-item-width);
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        grid-template-rows: 150px auto 1fr auto;
+        gap: 0.25rem;
+        background: white;
+        color: black;
+        padding-bottom: 1rem;
+        will-change: transform;
+        animation-name: marquee;
+        animation-duration: var(--carousel-duration);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: calc( var(--carousel-duration) / var(--items) * 1 * var(--i) * -1 );
+    }
+
+
+/* Keyframe animation */
+@keyframes marquee {
+    100% {
+        transform: translateX( calc( (var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) * -1 ) );
+    }
 }

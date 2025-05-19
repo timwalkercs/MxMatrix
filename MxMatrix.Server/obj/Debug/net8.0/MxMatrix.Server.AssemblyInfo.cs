@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MxMatrix.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4603672f2ef0dbe2fcb508ee1b3336578c0cd582")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f42b26ee61d61b935ee0fa6028f8fe5c078ffc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MxMatrix.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MxMatrix.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
