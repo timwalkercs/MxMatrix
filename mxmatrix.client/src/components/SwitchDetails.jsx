@@ -161,9 +161,18 @@ function SwitchDetail() {
                         </table>
                     </div>
                 </div>
-
-                <ForceComparisonBar currentForce={switchData.bottomOutForce} />
-                <TravelComparisonBar currentTotalTravel={switchData.totalTravel} />
+                {(switchData.bottomOutForce !== null || switchData.totalTravel !== null) && (
+                    <div>
+                        <h2>How this switch compares...</h2>
+                        <p>The line reprents the range between the lowest and highest value in the database.</p>
+                    </div>
+                )}
+                {switchData.bottomOutForce !== null && (
+                    <ForceComparisonBar currentForce={switchData.bottomOutForce} />
+                )}
+                {switchData.totalTravel !== null && (
+                    <TravelComparisonBar currentTotalTravel={switchData.totalTravel} />
+                )}
             </div>
         </div>
     );

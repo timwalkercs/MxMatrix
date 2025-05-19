@@ -25,7 +25,6 @@ function ForceComparisonBar({ currentForce }) {
 
     return (
         <div className="force-bar-container">
-            <h2>How this switch compares...</h2>
             <h3>Bottom-Out Force</h3>
             <div className="force-bar">
                 <div className="force-label left">{min}g</div>

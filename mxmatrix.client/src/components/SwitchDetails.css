@@ -13,6 +13,17 @@
         font-weight: normal;
         font-size: xx-large;
     }
+    .page-container h2 {
+        color: black;
+        font-weight: normal;
+        padding-bottom: 0px;
+    }    
+    .page-container p {
+        color: black;
+        font-size: small;
+        font-weight: normal;
+        margin-top: -15px;
+    }
 
 .switch-card {
     display: flex;
