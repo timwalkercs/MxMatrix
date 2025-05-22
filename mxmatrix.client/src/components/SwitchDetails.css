@@ -28,28 +28,34 @@
 .switch-card {
     display: flex;
     background: white;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     max-width: 1200px;
-    width: 100%;
+    width: 95%;
     height: auto;
     color: black;
 }
 
 .switch-image {
-    flex: 0 0 45%;
+    flex: 0 0 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0rem;
     background-color: white;
     overflow: hidden;
 }
 
     .switch-image img {
-        width: 60%;
+        width: 70%;
         height: auto;
         object-fit: contain;
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
     }
 
 .switch-info {
@@ -72,9 +78,12 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;
+    table-layout: fixed;
 }
 
     .switch-table thead th {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
         background-color: #f3f3f3;
         padding: 0.5rem;
         text-align: center;
@@ -84,6 +93,7 @@
     }
 
     .switch-table td {
+        border-bottom: 1px solid #ccc;
         padding: 0.4rem 1rem;
         text-align: left;
         line-height: 1;
@@ -92,7 +102,7 @@
             white-space: nowrap;
         }
         .switch-table td:nth-child(2){
-            text-align: center;
+            text-align: left;
         }
 
     .switch-table tbody tr:nth-child(odd) {
@@ -107,6 +117,7 @@
     .switch-card {
         flex-direction: column;
         max-width: 90%;
+        border: 2px solid #ccc;
     }
 
     .switch-image {

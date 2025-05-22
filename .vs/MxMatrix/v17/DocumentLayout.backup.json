@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\timot\\source\\repos\\MxMatrix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\switchdetails.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\switchdetails.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
-      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.server\\controllers\\mxswitchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F98ED1D-3542-408D-9C68-7E0DD623712B}|MxMatrix.Server\\MxMatrix.Server.csproj|solutionrelative:mxmatrix.server\\controllers\\mxswitchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,67 +38,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SwitchDetails.jsx",
-              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\SwitchDetails.jsx",
-              "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\SwitchDetails.jsx",
-              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\SwitchDetails.jsx",
-              "RelativeToolTip": "mxmatrix.client\\src\\components\\SwitchDetails.jsx",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAKQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-05-19T18:56:00.869Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Program.cs",
+              "RelativeDocumentMoniker": "MxMatrix.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Program.cs",
+              "RelativeToolTip": "MxMatrix.Server\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA5wC8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T22:19:58.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Gallery.css",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Gallery.css",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\Gallery.css",
               "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Gallery.css",
               "RelativeToolTip": "mxmatrix.client\\src\\components\\Gallery.css",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAD8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-19T09:02:20.827Z",
+              "WhenOpened": "2025-05-21T22:03:02.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MxSwitchController.cs",
-              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Controllers\\MxSwitchController.cs",
-              "RelativeDocumentMoniker": "MxMatrix.Server\\Controllers\\MxSwitchController.cs",
-              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\MxMatrix.Server\\Controllers\\MxSwitchController.cs",
-              "RelativeToolTip": "MxMatrix.Server\\Controllers\\MxSwitchController.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAHwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T07:09:35.412Z",
-              "EditorCaption": ""
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\index.css",
+              "RelativeDocumentMoniker": "mxmatrix.client\\src\\index.css",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\index.css",
+              "RelativeToolTip": "mxmatrix.client\\src\\index.css",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-21T18:28:40.334Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Home.jsx",
-              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Home.jsx",
-              "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\Home.jsx",
-              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Home.jsx",
-              "RelativeToolTip": "mxmatrix.client\\src\\components\\Home.jsx",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwCwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-05-18T00:44:56.884Z",
-              "EditorCaption": ""
+              "Title": "NavBar.css",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\NavBar.css",
+              "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\NavBar.css",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\NavBar.css",
+              "RelativeToolTip": "mxmatrix.client\\src\\components\\NavBar.css",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-21T18:24:28.155Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Home.css",
-              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Home.css",
-              "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\Home.css",
-              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Home.css",
-              "RelativeToolTip": "mxmatrix.client\\src\\components\\Home.css",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-18T03:49:02.845Z"
+              "Title": "NavBar.jsx",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\NavBar.jsx",
+              "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\NavBar.jsx",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\NavBar.jsx",
+              "RelativeToolTip": "mxmatrix.client\\src\\components\\NavBar.jsx",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-05-21T18:24:23.543Z"
             }
           ]
         }

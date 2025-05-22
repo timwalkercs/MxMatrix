@@ -82,6 +82,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: background 1s ease-in-out;
     background: rgba(0, 0, 0, 0.2);
     z-index: 2000;
     display: flex;
@@ -97,6 +98,7 @@
     padding-top: 15px;
     padding-right: 10px;
     padding-left: 10px;
+    border-radius: 4px;
 }
 
     .search-box input {
@@ -104,6 +106,10 @@
         padding: 0.75rem;
         font-size: 1rem;
         border: 1px solid black;
+        border-radius: 3px;
+    }    
+    .search-box input:focus {
+        outline: none; 
     }
 
 .search-results {
@@ -111,6 +117,7 @@
     margin-top: 1rem;
     padding-left: 0rem;
     text-align: left;
+    margin-bottom: 5px;
 }
 
     .search-results li {

@@ -93,3 +93,15 @@
         padding: 0.2rem;
         font-size: small;
     }
+
+.type-filters input[type='checkbox'] {
+    accent-color: #fcca61
+}
+
+.silent-filter input[type='checkbox'] {
+    accent-color: #ffa1a1;
+}
+
+.dropdown-menu input[type='checkbox'] {
+    accent-color: #b59dfc
+}

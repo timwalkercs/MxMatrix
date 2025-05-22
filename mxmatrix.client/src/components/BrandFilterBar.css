@@ -28,3 +28,11 @@
         font-weight: normal;
         text-decoration: underline;
     }
+
+.brand-filters input[type='checkbox'] {
+    accent-color: lightgreen;
+}
+
+.descriptor-filters input[type='checkbox'] {
+    accent-color: lightblue;
+}

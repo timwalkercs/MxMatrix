@@ -25,25 +25,29 @@ function SpecFilterBar({ topHousings, bottomHousings, stemMaterials, types, onFi
             <h3>Switch Specs</h3>
 
             <h4>Type</h4>
-            {types.map((type) => (
-                <label key={type}>
-                    {type}
-                    <input
-                        type="checkbox"
-                        onChange={(e) => onFilterChange('type', type, e.target.checked)}
-                    />
-                </label>
-            ))}
+            <div className="type-filters">
+                {types.map((type) => (
+                    <label key={type}>
+                        {type}
+                        <input
+                            type="checkbox"
+                            onChange={(e) => onFilterChange('type', type, e.target.checked)}
+                        />
+                    </label>
+                ))}
+            </div>
 
 
             <h4>Silent</h4>
-            <label key='Silent'>
-                Yes
-                <input
-                    type="checkbox"
-                    onChange={(e) => onFilterChange('silent', true, e.target.checked)}
-                />
-            </label>
+            <div className="silent-filter">
+                <label key='Silent'>
+                    Yes
+                    <input
+                        type="checkbox"
+                        onChange={(e) => onFilterChange('silent', true, e.target.checked)}
+                    />
+                </label>
+            </div>
 
 
             <div className="dropdown" ref={dropdownRef}>

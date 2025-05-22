@@ -19,6 +19,7 @@ function Home() {
             });
     }, []);
     return (
+
         <div className="homepage">
             <h1>Welcome to MxMatrix</h1>
             <h4>Your curated database for mechanical keyboard switches.</h4>
