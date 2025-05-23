@@ -5,6 +5,7 @@
     background-color: white;
     color: black;
     text-align: left;
+    user-select: none;
 }
 
     .filters h4 {

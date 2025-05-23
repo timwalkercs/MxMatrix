@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\timot\\source\\repos\\MxMatrix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\switchdetails.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\switchdetails.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,15 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Home.jsx",
+              "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\Home.jsx",
+              "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Home.jsx",
+              "RelativeToolTip": "mxmatrix.client\\src\\components\\Home.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-05-23T01:42:21.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Gallery.css",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Gallery.css",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\Gallery.css",
               "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\Gallery.css",
               "RelativeToolTip": "mxmatrix.client\\src\\components\\Gallery.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAApwD8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAApwDoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-22T07:22:19.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T07:22:19.747Z"
             },
             {
               "$type": "Document",

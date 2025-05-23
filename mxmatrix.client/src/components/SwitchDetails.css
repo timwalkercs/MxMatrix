@@ -148,7 +148,8 @@
     display: inline-block;
     margin: 0 1px;
     text-decoration: none;
-    color: grey;
+    color: black;
+    border-bottom: 1px dotted grey;
     cursor: help;
 }
 
@@ -162,9 +163,8 @@
         border-style: solid;
         padding: 10px;
         position: absolute;
+        left: -30px;
         bottom: 150%;
-        left: 50%;
-        margin-left: -60px;
         opacity: 0;
         transition: opacity 0.25s;
     }
