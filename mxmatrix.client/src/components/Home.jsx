@@ -43,6 +43,11 @@ function Home() {
                 </div>
             </div>
 
+            <p>Are you new to the scene?</p>
+            <Link to="/learnmore">
+                <button className="learn-more-button">Learn More</button>
+            </Link>
+
             <h2>Recently Added Switches</h2>
             <div className="carousel" mask>
                 {recentSwitches.map((s, idx) => (

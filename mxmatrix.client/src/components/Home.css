@@ -8,11 +8,11 @@
     }
     .homepage h2 {
         font-weight: normal;
-        padding-top: 10rem;
+        padding-top: 5rem;
     }
     .homepage h4 {
         font-weight: normal;
-        padding-bottom: 10rem;
+        padding-bottom: 6rem;
     }
 
 .features {
@@ -48,6 +48,22 @@
     transition: all 0.3s ease-in-out;
     }
     .gallery-button:hover {
+        transform: scale(1.1);
+    }
+
+.learn-more-button {
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    padding: .75rem 2rem;
+    font-size: 1rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+    .learn-more-button:hover {
         transform: scale(1.1);
     }
 
