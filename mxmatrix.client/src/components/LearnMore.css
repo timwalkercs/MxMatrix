@@ -50,6 +50,7 @@
     .learn-header a {
         font-size: 0.9rem;
         text-decoration: underline;
+        padding-left: 10px;
     }
 
 .lm-image-wrapper {
