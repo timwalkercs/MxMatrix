@@ -133,6 +133,12 @@ function LearnMore() {
                     </li>
                 </ul>
 
+                <p>
+                    <a href="https://kineticlabs.com/blog/overview-of-popular-mechanical-keyboard-switch-housing-materials" target="_blank" rel="noopener noreferrer">This blogpost </a>
+                    dives a little deeper into explaining some popular housing materials.
+                </p>
+
+
             </section>
 
             <div className="learnmore-button-wrapper">

@@ -163,7 +163,7 @@
         border-style: solid;
         padding: 10px;
         position: absolute;
-        left: -30px;
+        left: -35px;
         bottom: 150%;
         opacity: 0;
         transition: opacity 0.25s;

@@ -95,7 +95,15 @@
     justify-content: center;
     align-items: flex-start;
     padding-top: 5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
+    .search-overlay.fade-in {
+        opacity: 1;
+    }
+    .search-overlay.fade-out {
+        opacity: 0;
+    }
 
 .search-box {
     width: 90%;

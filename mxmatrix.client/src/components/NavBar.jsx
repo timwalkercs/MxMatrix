@@ -4,12 +4,30 @@ import './NavBar.css';
 import logo from '../assets/LogoIcon.png';
 
 function NavBar() {
-    const [showOverlay, setShowOverlay] = useState(false);
+    const [showOverlay, setShowOverlay] = useState(false);  // controls animation state
+    const [isMounted, setIsMounted] = useState(false);       // controls if overlay is in the DOM
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
     const clickStartedInOverlay = useRef(false);
 
-    const toggleOverlay = () => setShowOverlay(prev => !prev);
+    const fadeDuration = 300; // milliseconds, match this with your CSS
+
+    const toggleOverlay = () => {
+        if (isMounted) {
+            // Start fade-out
+            setShowOverlay(false);
+            setTimeout(() => {
+                setIsMounted(false);
+                setQuery('');
+                setResults([]);
+            }, fadeDuration);
+        } else {
+            // Start fade-in
+            setIsMounted(true);
+            setTimeout(() => setShowOverlay(true), 10);
+        }
+    };
+
 
     useEffect(() => {
         if (query.trim() !== '') {
@@ -22,8 +40,6 @@ function NavBar() {
         }
     }, [query]);
 
-
-    //Below handlers prevent clicks started from outside of overlay from closing
     const handleOverlayMouseDown = (e) => {
         if (e.target.classList.contains('search-overlay')) {
             clickStartedInOverlay.current = true;
@@ -59,9 +75,9 @@ function NavBar() {
             </nav>
 
             {/* Search Bar Overlay */}
-            {showOverlay && (
+            {isMounted && (
                 <div
-                    className="search-overlay"
+                    className={`search-overlay ${showOverlay ? "fade-in" : "fade-out"}`}
                     onMouseDown={handleOverlayMouseDown}
                     onMouseUp={handleOverlayMouseUp}
                 >
