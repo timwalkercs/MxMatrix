@@ -29,10 +29,19 @@ function LearnMore() {
                     The anatomy of a mechanical switch consists of several key components:
                 </p>
                 <ul>
-                    <li><strong>Stem:</strong> The stem is the part of the switch that moves up and down during a keystroke.</li>
-                    <li><strong>Spring:</strong> Beneath the stem, is a spring that provides resistance when the switch is pressed.</li>
-                    <li><strong>Metal Contacts:</strong> Two metal contacts within the switch that touch to complete a circuit and register an input.</li>
-                    <li><strong>Housing:</strong> Switches have a top and bottom housing that clasp together to hold all the components and provide stability.</li>
+                    <li>
+                        <strong>Stem:</strong> The stem is the part of the switch that moves up and down during a keystroke. The cross shape acts as the attachment point for the keycaps.
+                    </li>
+                    <li>
+                        <strong>Spring:</strong> Beneath the stem, is a spring that provides resistance when the switch is pressed. Springs come in various lengths and weights, which play a significant role in typing feel.
+                        There are also multi-stage springs with variable threading which can create a progressive level of tension along the length of the keystroke.
+                    </li>
+                    <li>
+                        <strong>Metal Contacts:</strong> Two metal contacts, also known as leaves, within the switch that touch to complete a circuit and register an input.
+                    </li>
+                    <li>
+                        <strong>Housing:</strong> Switches have a top and bottom housing that clasp together to hold all the components and provide a stable channel to guide the rails of the stem up and down.
+                    </li>
                 </ul>
                 <div className="lm-image-wrapper">
                     <img
@@ -56,9 +65,18 @@ function LearnMore() {
                     </h3>
                 </div>
                 <ul>
-                    <li><strong>Linear:</strong> Smooth keystroke without tactile bump or click (e.g., Cherry MX Red).</li>
-                    <li><strong>Tactile:</strong> Noticeable bump during keypress for feedback (e.g., Cherry MX Brown).</li>
-                    <li><strong>Clicky:</strong> Tactile bump with audible click sound due to an additional mechanism inside of the switch (e.g., Cherry MX Blue).</li>
+                    <li>
+                        <strong>Linear:</strong> Smooth keystroke without tactile bump or click (e.g., Cherry MX Red).
+                    </li>
+                    <p>Linear switches are the most unassuming and are a good choice for gamers because they are smooth, responsive, and spammable.</p>
+                    <li>
+                        <strong>Tactile:</strong> Noticeable bump during keypress for feedback (e.g., Cherry MX Brown).
+                    </li>
+                    <p>These switches can have varying levels of tacility, ranging from a near-linear feel to a harsh bump for maximum feedback. The loaction of this bump can also vary from the very beginning of the keystroke to the point of actuation.</p>
+                    <li>
+                        <strong>Clicky:</strong> Tactile bump with audible click sound due to an additional mechanism inside of the switch (e.g., Cherry MX Blue).
+                    </li>
+                    <p>This loud 'click' is what many people imagine when they think of mechanical keyboards, but clicky switches are the least common among hobbyists. It's probably best to avoid using these in an office setting out of consideration for your coworkers.</p>
                 </ul>
 
                 <figure className="switch-diagram">
@@ -98,7 +116,9 @@ function LearnMore() {
                     These specifications affect the general typing feel of a switch:
                 </p>
                 <ul>
-                    <li><strong>Operating/Actuation Force and Bottom-Out Force:</strong> Actuation force is the force needed to press a key and register an input. Bottom-out force is the force required for the stem to reach its total travel distance. Indicates how much resistance you'll feel when typing.</li>
+                    <li>
+                        <strong>Operating/Actuation Force and Bottom-Out Force:</strong> Actuation force is the force needed to press a key and register an input. Bottom-out force is the force required for the stem to reach its total travel distance. Indicates how much resistance you'll feel when typing.
+                    </li>
 
                     <li>
                         <strong>Pre-Travel & Total Travel Distance:</strong> Pre-travel is how far a key must be pressed to actuate - shorter distances mean faster response. Total travel is the full depth a key can be pressed before bottoming out.
@@ -137,7 +157,20 @@ function LearnMore() {
                     <a href="https://kineticlabs.com/blog/overview-of-popular-mechanical-keyboard-switch-housing-materials" target="_blank" rel="noopener noreferrer">This blogpost </a>
                     dives a little deeper into explaining some popular housing materials.
                 </p>
+            </section>
 
+            <section className="learn-section">
+                <div className="learn-header">
+                    <h2>Summary</h2>
+                </div>
+
+                <p>
+                    In short, mechanical keyboard switches can be broken down into a several key components. Slight variations in all of these things come together to give each switch its own personality.
+                </p>
+                <p>
+                    The experience of testing new switches and finding out what you prefer is part of what makes the hobby so enjoyable. This site's goal is to help educate you and make things a little easier to understand.
+                    Take a look at the database and maybe you'll find a switch that's right for you! 
+                </p>
 
             </section>
 
