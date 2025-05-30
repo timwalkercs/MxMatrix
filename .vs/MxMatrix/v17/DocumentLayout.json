@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\timot\\source\\repos\\MxMatrix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\learnmore.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\learnmore.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\learnmore.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\learnmore.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\learnmore.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|solutionrelative:mxmatrix.client\\src\\components\\learnmore.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1A2EEA8-7EC7-B866-745E-2A1C0AB0C7FC}|mxmatrix.client\\mxmatrix.client.esproj|c:\\users\\timot\\source\\repos\\mxmatrix\\mxmatrix.client\\src\\components\\navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,13 +46,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "NavBar.jsx",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\NavBar.jsx",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\NavBar.jsx",
               "ToolTip": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\NavBar.jsx",
               "RelativeToolTip": "mxmatrix.client\\src\\components\\NavBar.jsx",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-05-28T21:49:01.173Z",
               "EditorCaption": ""
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LearnMore.jsx",
               "DocumentMoniker": "C:\\Users\\timot\\source\\repos\\MxMatrix\\mxmatrix.client\\src\\components\\LearnMore.jsx",
               "RelativeDocumentMoniker": "mxmatrix.client\\src\\components\\LearnMore.jsx",
