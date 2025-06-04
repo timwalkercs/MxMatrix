@@ -2,6 +2,7 @@
     padding: 5rem 1rem;
     text-align: center;
     color: black;
+    min-height: 90vh;
 }
     .homepage h1{
         padding-top: 2.5rem;

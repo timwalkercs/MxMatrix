@@ -1,0 +1,33 @@
+.foot-wrapper {
+    width: auto;
+    background-color: white;
+    padding: 1rem 0;
+    padding-left: 2rem;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    position: static;
+}
+    .foot-wrapper h5{
+        font-size: small;
+        font-weight: normal;
+    }
+    .foot-wrapper p {
+        font-size: small;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+.footer-links {
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+    font-weight: normal;
+}
+    .footer-links:hover{
+        text-decoration: underline;
+        color: black;
+    }
+

@@ -5,10 +5,12 @@ import Gallery from "./components/Gallery";
 import LearnMore from "./components/LearnMore";
 import SwitchDetails from './components/SwitchDetails';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
-        <>          
+        <div className="app-container">          
             <Router>
                 <NavBar />
                 <Routes>
@@ -17,8 +19,10 @@ function App() {
                     <Route path="/learnmore" element={<LearnMore />} />
                     <Route path="/switchdetails/:id" element={<SwitchDetails />} />
                 </Routes>
+                <Footer />
+                <ScrollToTop />
             </Router>
-        </>
+        </div>
 
     );
 }

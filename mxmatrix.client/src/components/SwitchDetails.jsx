@@ -20,7 +20,6 @@ function SwitchDetail() {
     return (
         <div>
             <div className="page-container">
-                <h1>Switch Details</h1>
                 <div className="switch-card">
                     <div className="switch-image">
                         <img src={switchData.imageUrl} alt={switchData.name} />

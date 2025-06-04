@@ -6,6 +6,7 @@
     background: white;
     padding-top: 4rem;
     text-align: center; /* Center the header text */
+    min-height: 100vh;
 }
     .page-container h1 {
         color: black;
