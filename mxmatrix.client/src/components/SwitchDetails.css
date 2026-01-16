@@ -141,7 +141,33 @@
             font-size: 1rem;
         }
 }
+.comparison-header {
+    margin-bottom: 50px;
+}
 
+.bar-wrapper {
+    display: flex;
+    justify-content: center; /*centers bars horizontally */
+    align-items: stretch; /* optional, keeps heights consistent */
+    gap: 190px; /* spacing between bars */
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 95%;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .bar-wrapper {
+        flex-direction: column;
+        max-width: 90%;
+        gap: 5px;
+    }
+    .comparison-header {
+        margin-bottom: 5px;
+    }
+}
 
 .tooltip {
     white-space: normal;

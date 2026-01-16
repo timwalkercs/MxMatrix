@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './TravelComparisonBar.css';
+import Progress from 'react-circle-progress-bar';
 
 function TravelComparisonBar({ currentTotalTravel }) {
     const [range, setRange] = useState({ min: 0, max: 4 }); // placeholder
@@ -25,20 +26,12 @@ function TravelComparisonBar({ currentTotalTravel }) {
 
     return (
         <div className="travel-bar-container">
-            <h3>Total Travel</h3>
-            <div className="travel-bar">
-                <div className="travel-label left">{min}mm</div>
-                <div className="travel-line">
-                    <div className="travel-center-marker"></div>
-                    <div
-                        className="travel-marker"
-                        style={{ left: `${percent}%` }}
-                        title={`${currentTotalTravel}mm`}
-                    ></div>
-                </div>
-                <div className="travel-label right">{max}mm</div>
+            <span className="bar-header">Travel Distance</span>
+            <div className="radial-travel-bar">
+                <span className="min-travel">{min + " mm"}</span>
+                <Progress progress={percent} reduction='.5' hideValue='true' />
+                <span className="max-travel">{max + " mm"}</span>
             </div>
-            <p>Standard total-travel is 4mm</p>
         </div>
     );
 }

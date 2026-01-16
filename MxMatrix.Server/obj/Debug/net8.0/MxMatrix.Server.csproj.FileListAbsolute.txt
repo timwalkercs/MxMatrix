@@ -19,12 +19,6 @@ C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\scopedcss\
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets\msbuild.MxMatrix.Server.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets\msbuild.MxMatrix.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets\msbuild.build.MxMatrix.Server.props
-C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MxMatrix.Server.props
-C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MxMatrix.Server.props
-C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\MxMatrix.E7902B61.Up2Date
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\MxMatrix.Server.dll
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\refint\MxMatrix.Server.dll
@@ -187,3 +181,9 @@ C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\pu
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\MxMatrix.Server.deps.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\MxMatrix.Server.runtimeconfig.json
 C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\bin\Debug\net8.0\publish\publish\MxMatrix.Server.staticwebassets.endpoints.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\timot\source\repos\MxMatrix\MxMatrix.Server\obj\Debug\net8.0\swae.build.ex.cache

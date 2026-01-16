@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\MxMatrix.Server.props" />
-</Project>

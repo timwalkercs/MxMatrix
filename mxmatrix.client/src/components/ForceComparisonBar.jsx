@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ForceComparisonBar.css';
+import Progress from 'react-circle-progress-bar';
 
 function ForceComparisonBar({ currentForce }) {
     const [range, setRange] = useState({ min: 0, max: 100 }); // placeholder
@@ -24,20 +25,14 @@ function ForceComparisonBar({ currentForce }) {
     const percent = ((currentForce - min) / (max - min)) * 100;
 
     return (
-        <div className="force-bar-container">
-            <h3>Bottom-Out Force</h3>
-            <div className="force-bar">
-                <div className="force-label left">{min}g</div>
-                <div className="force-line">
-                    <div className="force-center-marker"></div>
-                    <div
-                        className="force-marker"
-                        style={{ left: `${percent}%` }}
-                        title={`${currentForce}g`}
-                    ></div>
-                </div>
-                <div className="force-label right">{max}g</div>
+        <div className="radial-force-bar">        <div className="travel-bar-container">
+            <span className="bar-header">Bottom-Out Force</span>
+            <div className="radial-travel-bar">
+                <span className="min-travel">{min + "g"}</span>
+                <Progress progress={percent} reduction='.5' hideValue='true'/>
+                <span className="max-travel">{max + "g"}</span>
             </div>
+        </div>
         </div>
     );
 }
