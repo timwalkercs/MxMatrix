@@ -62,6 +62,9 @@ function NavBar() {
                         <Link to="/gallery">
                             <p className="nav-button">SWITCHES</p>
                         </Link>
+                        <Link to="/compare">
+                            <p className="nav-button">COMPARE</p>
+                        </Link>
                     </div>
                     <div className="nav-center">
                         <Link to="/">
@@ -91,7 +94,7 @@ function NavBar() {
                         />
                         <ul className="search-results">
                             {results.map((sw) => (
-                                <li key={sw.switch_id}>
+                                <li key={sw.id}>
                                     <Link to={`/switchdetails/${sw.id}`} onClick={toggleOverlay}>
                                         {sw.brand} {sw.name}
                                     </Link>

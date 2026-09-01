@@ -1,5 +1,5 @@
 .homepage {
-    padding: 5rem 1rem;
+    padding: 7rem 1rem 5rem;
     text-align: center;
     color: black;
     min-height: 90vh;
@@ -25,47 +25,51 @@
 }
 
 .feature-card {
-    background: white;
-    padding: 1rem 2rem;
-    border-left-style: none;
-    border-right-style: none;
-    border-width: 1px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-color: black;
-
+    background: var(--surface);
+    padding: 1.5rem 1.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     max-width: 300px;
+    transition: box-shadow var(--ease), transform var(--ease);
 }
 
+    .feature-card:hover {
+        box-shadow: var(--shadow);
+        transform: translateY(-3px);
+    }
+
 .gallery-button {
-    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-    padding: .75rem 2rem;
-    font-size: 1.2rem;
-    background: black;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    padding: .8rem 2.2rem;
+    font-size: 1.1rem;
+    background: var(--ink);
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    }
+    transition: transform var(--ease), box-shadow var(--ease);
+}
+
     .gallery-button:hover {
-        transform: scale(1.1);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 26px rgba(0,0,0,0.18);
     }
 
 .learn-more-button {
-    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     padding: .75rem 2rem;
     font-size: 1rem;
-    background: black;
+    background: var(--ink);
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: transform var(--ease), box-shadow var(--ease);
 }
 
     .learn-more-button:hover {
-        transform: scale(1.1);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 26px rgba(0,0,0,0.18);
     }
 
 .recent-card {

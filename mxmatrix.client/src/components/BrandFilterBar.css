@@ -1,39 +1,52 @@
 /* Filters.css */
 .filters {
-    padding: 1rem;
+    padding: 1.1rem 1.25rem;
     margin-bottom: 2rem;
-    background-color: white;
-    color: black;
+    background-color: var(--surface);
+    color: var(--ink);
     text-align: left;
     user-select: none;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
 }
 
-    .filters h4 {
-        margin-bottom: 0.5rem;
-        color: black;
-        font-weight: normal;
-        text-decoration: underline;
+    .filters h4,
+    .filters h3 {
+        margin: 0 0 0.6rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink-2);
+        font-weight: 500;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
     .filters label {
         display: block;
-        margin-bottom: 0.2rem;
-        color: black;
-        font-size: small;
+        margin-bottom: 0.15rem;
+        padding: 0.15rem 0.3rem;
+        margin-left: -0.3rem;
+        border-radius: 6px;
+        color: var(--ink);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: background-color var(--ease);
     }
 
-    .filters h3 {
-        text-align: left;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-weight: normal;
-        text-decoration: underline;
+        .filters label:hover {
+            background-color: var(--tint);
+        }
+
+    .filters input[type='checkbox'] {
+        accent-color: var(--ink);
+        margin-right: 0.4rem;
     }
 
 .brand-filters input[type='checkbox'] {
-    accent-color: lightgreen;
+    accent-color: #3f9d6d;
 }
 
 .descriptor-filters input[type='checkbox'] {
-    accent-color: lightblue;
+    accent-color: #3b82c4;
 }

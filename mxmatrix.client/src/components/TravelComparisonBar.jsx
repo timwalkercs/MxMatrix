@@ -29,7 +29,7 @@ function TravelComparisonBar({ currentTotalTravel }) {
             <span className="bar-header">Travel Distance</span>
             <div className="radial-travel-bar">
                 <span className="min-travel">{min + " mm"}</span>
-                <Progress progress={percent} reduction='.5' hideValue='true' />
+                <Progress progress={percent} reduction='.5' hideValue='true'/>
                 <span className="max-travel">{max + " mm"}</span>
             </div>
         </div>

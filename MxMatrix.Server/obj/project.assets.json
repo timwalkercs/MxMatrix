@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net8.0": {
       "Azure.Core/1.38.0": {
@@ -60,7 +60,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.23": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.30": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1493,10 +1493,10 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.23": {
-      "sha512": "g7whRdNtTf+ngEbr1HMeb4hzR5JWDeTOcycZFp6vPb1GYN8KLeqPdR/nmmbs6r8yxFqh4VTcoPSSexFS8ZiX0A==",
+    "Microsoft.AspNetCore.SpaProxy/8.0.30": {
+      "sha512": "0y8hv54yXWFHFYImzRXASHWl23tKuMouSWMB2AY2LKTnF/4gFl7c4fTSGk5YM9YikK8X79iNufBO6gGbGl6vCw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.23",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.30",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1504,7 +1504,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.8.0.23.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.8.0.30.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -4072,6 +4072,7 @@
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -4086,10 +4087,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.AspNetCore.SpaProxy": {
@@ -4134,7 +4136,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

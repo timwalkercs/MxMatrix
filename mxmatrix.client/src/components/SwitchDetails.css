@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     background: white;
-    padding-top: 4rem;
+    padding-top: 6rem;
     text-align: center; /* Center the header text */
     min-height: 100vh;
 }
@@ -77,41 +77,64 @@
 
 .switch-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 0.95rem;
     table-layout: fixed;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
 }
 
     .switch-table thead th {
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        background-color: #f3f3f3;
-        padding: 0.5rem;
+        background-color: var(--tint);
+        border-bottom: 1px solid var(--line);
+        padding: 0.9rem 1rem;
         text-align: center;
-        font-size: 1.3rem;
-        text-decoration: none;
-        font-weight: normal;
+        font-size: 1.15rem;
+        font-weight: 500;
+        letter-spacing: -0.01em;
     }
+        .switch-table thead th:first-child {
+            border-radius: var(--radius) 0 0 0;
+        }
+        .switch-table thead th:last-child {
+            border-radius: 0 var(--radius) 0 0;
+        }
 
     .switch-table td {
-        border-bottom: 1px solid #ccc;
-        padding: 0.4rem 1rem;
+        border-bottom: 1px solid var(--line);
+        padding: 0.65rem 1rem;
         text-align: left;
-        line-height: 1;
+        line-height: 1.35;
     }
-        .switch-table td:nth-child(1){
+        .switch-table td:nth-child(1) {
             white-space: nowrap;
+            color: var(--ink-2);
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
         }
-        .switch-table td:nth-child(2){
+        .switch-table td:nth-child(2) {
             text-align: left;
         }
 
-    .switch-table tbody tr:nth-child(odd) {
-        background-color: #ffffff;
+    .switch-table tbody tr:last-child td {
+        border-bottom: none;
     }
+        .switch-table tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 var(--radius);
+        }
+        .switch-table tbody tr:last-child td:last-child {
+            border-radius: 0 0 var(--radius) 0;
+        }
 
     .switch-table tbody tr:nth-child(even) {
-        background-color: #f8f8f8;
+        background-color: var(--tint);
+    }
+
+    .switch-table tbody tr:hover {
+        background-color: #f2f2f2;
     }
 
 @media (max-width: 768px) {
@@ -176,24 +199,37 @@
     margin: 0 1px;
     text-decoration: none;
     color: black;
-    border-bottom: 1px dotted grey;
+    border-bottom: 1px dotted var(--line-strong);
     cursor: help;
 }
 
     .tooltip .tooltiptext {
         visibility: hidden;
-        width: 400px;
-        background-color: black;
+        background-color: #1a1a1a;
         color: white;
         text-align: left;
-        border-radius: 1px;
-        border-style: solid;
-        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: var(--shadow);
+        font-size: 0.85rem;
+        line-height: 1.5;
+        text-transform: none;
+        letter-spacing: normal;
+        padding: 12px 14px;
         position: absolute;
-        left: -35px;
-        bottom: 150%;
+        z-index: 5;
+        left: 0;
+        top: calc(100% + 8px);
+        width: 400px;
+        max-width: calc(100vw - 2rem);
         opacity: 0;
         transition: opacity 0.25s;
+    }
+
+    /* ponytail: flip up near the bottom of the table; pure CSS, no positioning lib */
+    .switch-table tbody tr:nth-last-child(-n+4) .tooltip .tooltiptext {
+        top: auto;
+        bottom: calc(100% + 8px);
     }
 
     .tooltip:hover .tooltiptext {

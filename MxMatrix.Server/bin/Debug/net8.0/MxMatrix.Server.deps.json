@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "MxMatrix.Server/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.SpaProxy": "8.0.23",
+          "Microsoft.AspNetCore.SpaProxy": "8.0.30",
           "Microsoft.Data.SqlClient": "6.0.2",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.Design": "9.0.4",
@@ -57,11 +57,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.23": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.30": {
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {
-            "assemblyVersion": "8.0.23.0",
-            "fileVersion": "8.0.2325.60905"
+            "assemblyVersion": "8.0.30.0",
+            "fileVersion": "8.0.3026.37304"
           }
         }
       },
@@ -983,12 +983,12 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.23": {
+    "Microsoft.AspNetCore.SpaProxy/8.0.30": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g7whRdNtTf+ngEbr1HMeb4hzR5JWDeTOcycZFp6vPb1GYN8KLeqPdR/nmmbs6r8yxFqh4VTcoPSSexFS8ZiX0A==",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.23",
-      "hashPath": "microsoft.aspnetcore.spaproxy.8.0.23.nupkg.sha512"
+      "sha512": "sha512-0y8hv54yXWFHFYImzRXASHWl23tKuMouSWMB2AY2LKTnF/4gFl7c4fTSGk5YM9YikK8X79iNufBO6gGbGl6vCw==",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.30",
+      "hashPath": "microsoft.aspnetcore.spaproxy.8.0.30.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
