@@ -1,31 +1,58 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import './Gallery.css';
-import BrandFilterBar from './BrandFilterBar';
-import SpecFilterBar from './SpecFilterBar';
+import FilterBar from './FilterBar';
+import SwitchImage from './SwitchImage';
+
+// filter state lives in the query string, so a filtered gallery can be shared and survives a reload
+const MULTI = {
+    brand: 'brand',
+    type: 'type',
+    descriptor: 'sound',
+    topHousing: 'top',
+    bottomHousing: 'bottom',
+    stemMaterial: 'stem',
+};
+const RANGES = { bottomOutForce: 'force', totalTravel: 'travel' };
+const LABELS = {
+    brand: 'Brand', type: 'Type', descriptor: 'Sound & Feel', topHousing: 'Top',
+    bottomHousing: 'Bottom', stemMaterial: 'Stem',
+    bottomOutForce: 'Force', totalTravel: 'Travel',
+};
+
+function parseFilters(params) {
+    const f = { silent: params.get('silent') === '1' };
+    for (const [key, name] of Object.entries(MULTI)) {
+        const raw = params.get(name);
+        f[key] = raw ? raw.split(',').filter(Boolean) : [];
+    }
+    for (const [key, name] of Object.entries(RANGES)) {
+        const [min = '', max = ''] = (params.get(name) || '').split('~');
+        f[key] = { min, max };
+    }
+    return f;
+}
+
+function toParams(f) {
+    const p = new URLSearchParams();
+    for (const [key, name] of Object.entries(MULTI)) {
+        if (f[key].length) p.set(name, f[key].join(','));
+    }
+    for (const [key, name] of Object.entries(RANGES)) {
+        if (f[key].min !== '' || f[key].max !== '') p.set(name, `${f[key].min}~${f[key].max}`);
+    }
+    if (f.silent) p.set('silent', '1');
+    return p;
+}
+
+const uniqueSorted = (list) => [...new Set(list.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 
 function Gallery() {
-    const [filtersVisible, setFiltersVisible] = useState(false);
     const [switches, setSwitches] = useState([]);
     const [descriptors, setDescriptors] = useState([]);
-    const [filteredSwitches, setFilteredSwitches] = useState([]);
-    const [brands, setBrands] = useState([]);
-    const [types, setTypes] = useState([]);
-    const [topHousings, setTopHousings] = useState([]);
-    const [bottomHousings, setBottomHousings] = useState([]);
-    const [stemMaterials, setStemMaterials] = useState([]);
-    const [filters, setFilters] = useState({
-        brand: new Set(),
-        topHousing: new Set(),
-        bottomHousing: new Set(),
-        stemMaterial: new Set(),
-        type: new Set(),
-        silent: false,
-        bottomOutForce: { min: '', max: '' },
-        totalTravel: { min: '', max: '' },
-        descriptor: new Set(),
-        // Add more filters if you want
-    });
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const filters = useMemo(() => parseFilters(searchParams), [searchParams]);
 
     useEffect(() => {
         Promise.all([
@@ -34,136 +61,113 @@ function Gallery() {
         ])
             .then(([data, descData]) => {
                 setSwitches(data);
-                setFilteredSwitches(data);
                 setDescriptors(descData);
-
-                //Set types
-                const typeList = ["Linear", "Tactile", "Clicky"];
-                setTypes(typeList);
-
-                // Get unique brands
-                const brandList = [...new Set(data.map(sw => sw.brand))];
-                setBrands(brandList);
-
-                // Get unique top housing materials
-                const topHousingList = [...new Set(data.map(sw => sw.topHousingMaterial))];
-                setTopHousings(topHousingList);
-
-                // Get unique bottom housing materials
-                const bottomHousingList = [...new Set(data.map(sw => sw.bottomHousingMaterial))];
-                setBottomHousings(bottomHousingList);
-
-                // Get unique bottom housing materials
-                const stemMaterialList = [...new Set(data.map(sw => sw.stemMaterial))];
-                setStemMaterials(stemMaterialList);
             })
             .catch(error => console.error('Error fetching switches:', error));
-
     }, []);
 
+    const facets = useMemo(() => ({
+        brands: uniqueSorted(switches.map(sw => sw.brand)),
+        types: ['Linear', 'Tactile', 'Clicky'],
+        descriptors: uniqueSorted(descriptors.map(d => d.name)),
+        topHousings: uniqueSorted(switches.map(sw => sw.topHousingMaterial)),
+        bottomHousings: uniqueSorted(switches.map(sw => sw.bottomHousingMaterial)),
+        stemMaterials: uniqueSorted(switches.map(sw => sw.stemMaterial)),
+    }), [switches, descriptors]);
 
-    const handleFilterChange = (filterType, value, isChecked) => {
-        const newFilters = { ...filters };
+    const filteredSwitches = useMemo(() => {
+        const inSet = (chosen, value) => chosen.length === 0 || chosen.includes(value);
+        const inRange = (range, value) =>
+            (range.min === '' || value >= parseFloat(range.min)) &&
+            (range.max === '' || value <= parseFloat(range.max));
 
-        //Silent filter is not a Set like the other filters
-        if (filterType === 'silent') {
-            newFilters.silent = isChecked;
-        }
-        else if (filterType === 'bottomOutForce' || filterType === 'totalTravel') {
-            // value should be an object: { min: number|string, max: number|string }
-            newFilters[filterType] = value;
-        }
-        else {
-            const updatedSet = new Set(newFilters[filterType]);
-            if (isChecked) {
-                updatedSet.add(value);
-            } else {
-                updatedSet.delete(value);
-            }
-            newFilters[filterType] = updatedSet;
-        }
+        return switches.filter(sw =>
+            inSet(filters.brand, sw.brand) &&
+            inSet(filters.type, sw.type) &&
+            inSet(filters.topHousing, sw.topHousingMaterial) &&
+            inSet(filters.bottomHousing, sw.bottomHousingMaterial) &&
+            inSet(filters.stemMaterial, sw.stemMaterial) &&
+            (!filters.silent || sw.silent === true) &&
+            // descriptors stack: a switch must carry every one that's checked
+            filters.descriptor.every(d => (sw.descriptors || []).includes(d)) &&
+            inRange(filters.bottomOutForce, sw.bottomOutForce ?? 0) &&
+            inRange(filters.totalTravel, sw.totalTravel ?? 0)
+        );
+    }, [switches, filters]);
 
-        setFilters(newFilters);
+    const apply = (next) => setSearchParams(toParams(next), { replace: true });
 
+    const toggle = (group, value) => apply({
+        ...filters,
+        [group]: filters[group].includes(value)
+            ? filters[group].filter(v => v !== value)
+            : [...filters[group], value],
+    });
 
-        // Now filter the switches
-        let filtered = switches.filter(sw => {
-            const brandMatch = newFilters.brand.size === 0 || newFilters.brand.has(sw.brand);
-            const topHousingMatch = newFilters.topHousing.size === 0 || newFilters.topHousing.has(sw.topHousingMaterial);
-            const bottomHousingMatch = newFilters.bottomHousing.size === 0 || newFilters.bottomHousing.has(sw.bottomHousingMaterial);
-            const stemMaterialMatch = newFilters.stemMaterial.size === 0 || newFilters.stemMaterial.has(sw.stemMaterial);
-            const typeMatch = newFilters.type.size === 0 || newFilters.type.has(sw.type);
-            const silentMatch = !newFilters.silent || sw.silent === true;
-            const descMatch = newFilters.descriptor.size === 0 || (sw.descriptors && [...newFilters.descriptor].every(d => sw.descriptors.includes(d)));
+    const setRange = (group, part, value) => apply({
+        ...filters,
+        [group]: { ...filters[group], [part]: value },
+    });
 
-            const bof = sw.bottomOutForce ?? 0;
-            const tt = sw.totalTravel ?? 0;
-
-            const bottomOutForceMatch =
-                (!newFilters.bottomOutForce.min || bof >= parseFloat(newFilters.bottomOutForce.min)) &&
-                (!newFilters.bottomOutForce.max || bof <= parseFloat(newFilters.bottomOutForce.max));
-
-            const totalTravelMatch =
-                (!newFilters.totalTravel.min || tt >= parseFloat(newFilters.totalTravel.min)) &&
-                (!newFilters.totalTravel.max || tt <= parseFloat(newFilters.totalTravel.max));
-
-            return brandMatch && topHousingMatch && bottomHousingMatch && stemMaterialMatch && typeMatch && silentMatch && descMatch && bottomOutForceMatch && totalTravelMatch;
-        });
-
-        setFilteredSwitches(filtered);
-    };
+    const chips = [
+        ...Object.keys(MULTI).flatMap(group => filters[group].map(value => ({
+            group,
+            value,
+            label: `${LABELS[group]}: ${value}`,
+            remove: () => toggle(group, value),
+        }))),
+        ...Object.keys(RANGES)
+            .filter(group => filters[group].min !== '' || filters[group].max !== '')
+            .map(group => ({
+                group,
+                value: 'range',
+                label: `${LABELS[group]}: ${filters[group].min || '0'}–${filters[group].max || '∞'}`,
+                remove: () => apply({ ...filters, [group]: { min: '', max: '' } }),
+            })),
+        ...(filters.silent ? [{
+            group: 'silent',
+            value: 'yes',
+            label: 'Silent',
+            remove: () => apply({ ...filters, silent: false }),
+        }] : []),
+    ];
 
     return (
         <div className="gallerydiv">
             <h1>Switch Gallery</h1>
 
-            <button
-                className="toggle-filters-button"
-                onClick={() => setFiltersVisible(prev => !prev)}
-            >
-                {filtersVisible ? "Hide Filters" : "Show Filters"}
-            </button>
+            <FilterBar
+                facets={facets}
+                filters={filters}
+                chips={chips}
+                shown={filteredSwitches.length}
+                total={switches.length}
+                onToggle={toggle}
+                onRange={setRange}
+                onSilent={(v) => apply({ ...filters, silent: v })}
+                onClear={() => setSearchParams(new URLSearchParams(), { replace: true })}
+            />
 
-            <div className="gallery-layout">
-                <div className={`leftfilter ${filtersVisible ? '' : 'hidden-filter'}`}>
-                    <BrandFilterBar
-                        brands={brands}
-                        descriptors={descriptors}
-                        onFilterChange={handleFilterChange}
-                    />
-                </div>
-
-
-
-                <div className="grid">
-                    {filteredSwitches.map((sw) => (
-                        <div key={sw.id} className="card">
+            <div className="grid">
+                {filteredSwitches.map((sw) => (
+                    <div key={sw.id} className="card">
+                        <Link to={`/switchdetails/${sw.id}`} className="card-link">
+                            <SwitchImage src={sw.imageUrl} alt={sw.name} />
+                        </Link>
+                        <div className="title">
                             <Link to={`/switchdetails/${sw.id}`} className="card-link">
-                                <img src={sw.imageUrl} alt={sw.name} />
+                                <p id="brand">{sw.brand}</p>
+                                <p>{sw.name}</p>
                             </Link>
-                            <div className="title">
-                                <Link to={`/switchdetails/${sw.id}`} className="card-link">
-                                    <p id="brand">{sw.brand}</p>
-                                    <p>{sw.name}</p>
-                                </Link>
-                                <p className="type">{sw.type}</p>
-                            </div>
-
+                            <p className={`type type-${(sw.type || '').toLowerCase()}`}>{sw.type}</p>
                         </div>
-                    ))}
-                </div>
-
-                <div className={`rightfilter ${filtersVisible ? '' : 'hidden-filter'}`}>
-                    <SpecFilterBar
-                        types={types}
-                        topHousings={topHousings}
-                        bottomHousings={bottomHousings}
-                        stemMaterials={stemMaterials}
-                        onFilterChange={handleFilterChange}
-                        filters={filters}
-                    />
-                </div>
+                    </div>
+                ))}
             </div>
+
+            {switches.length > 0 && filteredSwitches.length === 0 && (
+                <p className="gallery-empty">No switches match these filters.</p>
+            )}
         </div>
     );
 }

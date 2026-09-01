@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './SwitchDetails.css';
 import './Compare.css';
+import SwitchImage from './SwitchImage';
 import { FIELDS, hasValue } from './switchFields';
 
 function SwitchPicker({ placeholder, selected, onSelect }) {
@@ -23,7 +24,7 @@ function SwitchPicker({ placeholder, selected, onSelect }) {
     if (selected) {
         return (
             <div className="compare-slot">
-                <img src={selected.imageUrl} alt={selected.name} />
+                <SwitchImage src={selected.imageUrl} alt={selected.name} />
                 <h3>{selected.brand} {selected.name}</h3>
                 <button className="compare-change" onClick={() => { setFocusInput(true); onSelect(null); }}>Change</button>
             </div>

@@ -14,25 +14,7 @@
         color: var(--ink);
     }
 
-.gallery-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr 300px;
-    gap: 1rem;
-    align-items: start;
-    max-width: 100%;
-}
-
-.leftfilter {
-    grid-column: 1;
-}
-
-.rightfilter {
-    grid-column: 3;
-}
-
-
 .grid {
-    grid-column: 2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.25rem;
@@ -99,6 +81,19 @@ a.card-link {
         margin-top: 0.35rem;
     }
 
+/* switch type keeps its familiar colour code: red linear, brown tactile, blue clicky */
+.card .type-linear {
+    color: var(--linear);
+}
+
+.card .type-tactile {
+    color: var(--tactile);
+}
+
+.card .type-clicky {
+    color: var(--clicky);
+}
+
 #brand {
     font-weight: 500;
 }
@@ -107,65 +102,14 @@ a.card-link {
     text-decoration: underline;
 }
 
-@media (max-width: 1426px) {
-
-    .gallery-layout {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .leftfilter,
-    .rightfilter {
-        width: 100%;
-    }
-
-    .hidden-filter {
-        opacity: 0;
-        max-height: 0;
-        pointer-events: none;
-    }
-
-    .leftfilter {
-        grid-row: 1;
-        grid-column: 2;
-    }
-
-    .rightfilter {
-        grid-row: 1;
-        grid-column: 4;
-    }
-
-    .grid {
-        display: grid;
-        grid-row: 3;
-        grid-column: 1/-1;
-        background: none;
-
-    }
-
-    .toggle-filters-button {
-        width: 60%;
-        color: var(--ink);
-        background: var(--surface);
-        border: 1px solid var(--line-strong);
-        border-radius: 999px;
-        font-weight: normal;
-        outline: none;
-        transition: none;
-        margin-bottom: 5px;
-    }
-        .toggle-filters-button:hover {
-            color: black;
-            border-color: black;
-            font-weight: initial;
-            outline: none;
-            transition: ease-in-out;
-            transition-duration: .25s;
-        }
-
-
+.gallery-empty {
+    margin-top: 3rem;
+    color: var(--ink-2);
 }
-    @media (min-width: 1427px) {
-        .toggle-filters-button {
-            display: none;
-        }
+
+@media (min-width: 1427px) {
+    .grid {
+        max-width: 1400px;
+        margin: 0 auto;
     }
+}

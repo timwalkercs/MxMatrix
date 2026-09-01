@@ -1,90 +1,277 @@
 .learnmore-wrapper {
-    max-width: 900px;
+    max-width: 780px;
     margin: 0 auto;
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    color: #222;
-    font-family: system-ui;
-    line-height: 1.6;
+    padding: 6rem 2rem 3rem;
+    color: var(--ink);
+    text-align: left;
 }
 
-    .learnmore-wrapper h1 {
-        text-align: center;
-        font-size: xx-large;
-        font-weight: normal;
-        margin-bottom: 30px;
-        color: black;
+/* ---- hero ---- */
+.learn-hero {
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+}
+
+.learn-eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+}
+
+.learnmore-wrapper h1 {
+    margin: 0 0 1.25rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.learn-standfirst {
+    max-width: 34rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--ink-2);
+}
+
+.learn-toc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 2rem;
+}
+
+    .learn-toc a {
+        padding: 0.35rem 0.85rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-2);
+        transition: border-color var(--ease), color var(--ease), background-color var(--ease);
     }
 
+        .learn-toc a:hover {
+            border-color: var(--ink);
+            background: var(--tint);
+            color: var(--ink);
+        }
+
+/* ---- sections ---- */
 .learn-section {
-    text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 6rem;
 }
 
     .learn-section h2 {
-        color: #333;
-        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        margin: 0 0 1rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--line);
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
     }
 
-    .learn-section p, .learn-section ul {
-        font-size: 1.1rem;
+    .learn-section p {
+        font-size: 1rem;
+        line-height: 1.75;
+        color: var(--ink);
     }
 
-    .learn-section ul {
-    }
-
-.learn-header {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+.source-link {
+    margin-left: auto;
+    padding: 0.15rem 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    white-space: nowrap;
+    transition: border-color var(--ease), color var(--ease);
 }
 
-    .learn-header h3 {
-        margin: 0;
+    .source-link:hover {
+        border-color: var(--ink);
+        color: var(--ink);
     }
 
-    .learn-header a {
-        font-size: 0.9rem;
+.learn-aside {
+    padding: 1rem 1.25rem;
+    border-left: 2px solid var(--line-strong);
+    background: var(--tint);
+    border-radius: 0 8px 8px 0;
+    color: var(--ink-2);
+}
+
+    .learn-aside a {
+        color: var(--ink);
         text-decoration: underline;
-        padding-left: 10px;
+        text-underline-offset: 2px;
     }
 
-.lm-image-wrapper {
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
+/* ---- term / definition lists ---- */
+.spec-list {
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.spec-item {
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+}
+
+    .spec-item:last-child {
+        border-bottom: 1px solid var(--line);
+    }
+
+    .spec-item dt {
+        margin-bottom: 0.35rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-2);
+    }
+
+    .spec-item dd {
+        margin: 0;
+        line-height: 1.75;
+    }
+
+/* ---- switch type cards ---- */
+.type-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1rem;
-    align-items: center;
+    margin: 1.5rem 0 2rem;
 }
 
-.learn-image {
-    max-width: 100%;
-    height: auto;
+.type-card {
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--line-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition: box-shadow var(--ease), transform var(--ease);
 }
 
-.switch-diagram {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .type-card:hover {
+        box-shadow: var(--shadow);
+        transform: translateY(-3px);
+    }
+
+    .type-card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .type-card p {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        margin: 0 0 0.75rem;
+    }
+
+        .type-card p:last-child {
+            margin-bottom: 0;
+        }
+
+.type-summary {
+    font-weight: 500;
+}
+
+.type-example {
+    font-size: 0.8rem !important;
+    color: var(--ink-2);
+}
+
+.type-card.type-linear {
+    border-top-color: var(--linear);
+}
+
+    .type-card.type-linear h3 {
+        color: var(--linear);
+    }
+
+.type-card.type-tactile {
+    border-top-color: var(--tactile);
+}
+
+    .type-card.type-tactile h3 {
+        color: var(--tactile);
+    }
+
+.type-card.type-clicky {
+    border-top-color: var(--clicky);
+}
+
+    .type-card.type-clicky h3 {
+        color: var(--clicky);
+    }
+
+/* ---- figures ---- */
+.learn-figure {
     margin: 2rem 0;
-}
-
-.image-row {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-align: center;
 }
 
 .learn-image {
     max-width: 300px;
     height: auto;
+    border-radius: 8px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 figcaption {
-    font-style: italic;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+}
+
+.learnmore-button-wrapper {
+    padding: 2rem 0 1rem;
     text-align: center;
+    border-top: 1px solid var(--line);
+}
+
+@media (max-width: 768px) {
+    .learnmore-wrapper {
+        padding: 6rem 1.25rem 2rem;
+    }
+
+    .learnmore-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    .learn-section h2 {
+        flex-wrap: wrap;
+    }
+
+    .source-link {
+        margin-left: 0;
+    }
 }

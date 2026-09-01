@@ -9,6 +9,10 @@
     --radius: 12px;
     --shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 30px rgba(0,0,0,.07);
     --ease: 180ms cubic-bezier(.2,.6,.2,1);
+    /* switch type colour code, shared by the gallery cards and the guide */
+    --linear: #c2453a;
+    --tactile: #8a5a2b;
+    --clicky: #2f6fb0;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.55;
     font-weight: 400;
@@ -19,6 +23,10 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

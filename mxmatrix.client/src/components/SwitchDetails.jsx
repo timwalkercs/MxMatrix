@@ -4,6 +4,7 @@ import './SwitchDetails.css';
 import ForceComparisonBar from '../components/ForceComparisonBar';
 import TravelComparisonBar from '../components/TravelComparisonBar';
 import { FIELDS, hasValue } from './switchFields';
+import SwitchImage from './SwitchImage';
 
 function SwitchDetail() {
     const { id } = useParams();
@@ -23,7 +24,7 @@ function SwitchDetail() {
             <div className="page-container">
                 <div className="switch-card">
                     <div className="switch-image">
-                        <img src={switchData.imageUrl} alt={switchData.name} />
+                        <SwitchImage src={switchData.imageUrl} alt={switchData.name} />
                     </div>
                     <div className="switch-info">
                         <table className="switch-table">

@@ -1,4 +1,5 @@
 import './Home.css';
+import SwitchImage from './SwitchImage';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -54,7 +55,7 @@ function Home() {
                     <div key={idx} style={{ '--i': idx % recentSwitches.length }}>
                         <Link to={`/switchdetails/${s.id}`} key={s.id} className="recent-card">
                             <div className="image-wrapper">
-                                <img src={s.imageUrl} alt={`${s.brand} ${s.name}`} />
+                                <SwitchImage src={s.imageUrl} alt={`${s.brand} ${s.name}`} />
                                 <div className="overlay">
                                     <p>{s.brand} {s.name}</p>
                                 </div>
