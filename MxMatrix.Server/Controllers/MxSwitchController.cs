@@ -120,9 +120,12 @@ namespace MxMatrix.Data.Controllers
         [HttpGet("recent")]
         public async Task<IActionResult> GetRecentSwitches()
         {
+            // only switches that actually have a photo, and a few spare so the caller can
+            // drop any whose image no longer loads and still fill the carousel
             var recent = await _context.Switches
+                .Where(s => s.ImageUrl != null && s.ImageUrl != "")
                 .OrderByDescending(s => s.Id)
-                .Take(5)
+                .Take(12)
                 .Select(s => new {
                     s.Id,
                     s.Name,

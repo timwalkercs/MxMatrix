@@ -102,6 +102,26 @@ a.card-link {
     text-decoration: underline;
 }
 
+.card-loading {
+    padding-top: 1rem;
+}
+
+.skeleton-image {
+    width: 75%;
+    margin: 0 auto 0.9rem;
+    aspect-ratio: 3 / 2;
+}
+
+.skeleton-line {
+    height: 0.7rem;
+    margin: 0 0 0.45rem 12px;
+    width: 55%;
+}
+
+    .skeleton-line.short {
+        width: 35%;
+    }
+
 .gallery-empty {
     margin-top: 3rem;
     color: var(--ink-2);

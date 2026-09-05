@@ -3,9 +3,25 @@ import SwitchImage from './SwitchImage';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+const CAROUSEL_SIZE = 5;
+
+// the photos are hotlinked from another site, so a url in the database is no promise
+// that it still resolves - only carousel switches whose image really loads
+const imageLoads = (src) => new Promise((resolve) => {
+    if (!src) {
+        resolve(false);
+        return;
+    }
+    const probe = new Image();
+    probe.onload = () => resolve(true);
+    probe.onerror = () => resolve(false);
+    probe.src = src;
+});
+
 function Home() {
     const [recentSwitches, setRecentSwitches] = useState([]);
     useEffect(() => {
+        let cancelled = false;
         fetch('/api/mxswitch/recent')
             .then(res => {
                 if (!res.ok) {
@@ -13,11 +29,16 @@ function Home() {
                 }
                 return res.json();
             })
-            .then(data => setRecentSwitches(data))
+            .then(data => Promise.all(data.map(sw => imageLoads(sw.imageUrl)))
+                .then(ok => data.filter((_, i) => ok[i]).slice(0, CAROUSEL_SIZE)))
+            .then(usable => {
+                if (!cancelled) setRecentSwitches(usable);
+            })
             .catch(err => {
                 console.error('Error fetching recent switches:', err);
                 setRecentSwitches([]); // Fallback to empty
             });
+        return () => { cancelled = true; };
     }, []);
     return (
 
@@ -50,9 +71,9 @@ function Home() {
             </Link>
 
             <h2>Recently Added Switches</h2>
-            <div className="carousel" mask>
+            <div className="carousel" style={{ '--items': recentSwitches.length }}>
                 {recentSwitches.map((s, idx) => (
-                    <div key={idx} style={{ '--i': idx % recentSwitches.length }}>
+                    <div key={s.id} style={{ '--i': idx }}>
                         <Link to={`/switchdetails/${s.id}`} key={s.id} className="recent-card">
                             <div className="image-wrapper">
                                 <SwitchImage src={s.imageUrl} alt={`${s.brand} ${s.name}`} />

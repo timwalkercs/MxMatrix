@@ -74,7 +74,7 @@ function RangeGroup({ label, unit, step, range, onChange }) {
     );
 }
 
-function FilterBar({ facets, filters, chips, shown, total, onToggle, onRange, onSilent, onClear }) {
+function FilterBar({ facets, filters, chips, shown, total, loading, onToggle, onRange, onSilent, onClear }) {
     const barRef = useRef(null);
 
     // click anywhere outside the bar closes whichever menu is open
@@ -120,7 +120,7 @@ function FilterBar({ facets, filters, chips, shown, total, onToggle, onRange, on
 
             <div className="filter-status">
                 <p className="filter-result-count">
-                    Showing {shown} of {total} switches
+                    {loading ? 'Loading switches…' : `Showing ${shown} of ${total} switches`}
                 </p>
                 {chips.map(c => (
                     <button key={`${c.group}:${c.value}`} className="filter-chip" onClick={() => c.remove()}>

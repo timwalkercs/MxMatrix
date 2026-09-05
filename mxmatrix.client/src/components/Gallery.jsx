@@ -50,6 +50,7 @@ const uniqueSorted = (list) => [...new Set(list.filter(Boolean))].sort((a, b) =>
 function Gallery() {
     const [switches, setSwitches] = useState([]);
     const [descriptors, setDescriptors] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [searchParams, setSearchParams] = useSearchParams();
 
     const filters = useMemo(() => parseFilters(searchParams), [searchParams]);
@@ -63,7 +64,8 @@ function Gallery() {
                 setSwitches(data);
                 setDescriptors(descData);
             })
-            .catch(error => console.error('Error fetching switches:', error));
+            .catch(error => console.error('Error fetching switches:', error))
+            .finally(() => setLoading(false));
     }, []);
 
     const facets = useMemo(() => ({
@@ -142,6 +144,7 @@ function Gallery() {
                 chips={chips}
                 shown={filteredSwitches.length}
                 total={switches.length}
+                loading={loading}
                 onToggle={toggle}
                 onRange={setRange}
                 onSilent={(v) => apply({ ...filters, silent: v })}
@@ -149,6 +152,13 @@ function Gallery() {
             />
 
             <div className="grid">
+                {loading && Array.from({ length: 12 }, (_, i) => (
+                    <div key={`skeleton-${i}`} className="card card-loading" aria-hidden="true">
+                        <div className="skeleton skeleton-image" />
+                        <div className="skeleton skeleton-line" />
+                        <div className="skeleton skeleton-line short" />
+                    </div>
+                ))}
                 {filteredSwitches.map((sw) => (
                     <div key={sw.id} className="card">
                         <Link to={`/switchdetails/${sw.id}`} className="card-link">
@@ -165,7 +175,7 @@ function Gallery() {
                 ))}
             </div>
 
-            {switches.length > 0 && filteredSwitches.length === 0 && (
+            {!loading && switches.length > 0 && filteredSwitches.length === 0 && (
                 <p className="gallery-empty">No switches match these filters.</p>
             )}
         </div>
