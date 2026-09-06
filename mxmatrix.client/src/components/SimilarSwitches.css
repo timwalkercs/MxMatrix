@@ -1,0 +1,123 @@
+.similar-switches {
+    width: 95%;
+    max-width: 1200px;
+    margin: 4rem auto 5rem;
+    text-align: left;
+}
+
+    .similar-switches h2 {
+        margin: 0 0 2rem;
+        text-align: center;
+    }
+
+.similar-row + .similar-row {
+    margin-top: 3rem;
+}
+
+.similar-row h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.similar-blurb {
+    color: var(--ink-2);
+    font-size: 0.9rem;
+    margin: 0.25rem 0 1.25rem;
+}
+
+.similar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+}
+
+.similar-card {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 0.5rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition: box-shadow var(--ease), transform var(--ease);
+}
+
+    .similar-card:hover {
+        box-shadow: var(--shadow);
+        transform: translateY(-3px);
+    }
+
+    .similar-card img {
+        width: 70%;
+        height: 110px;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+.similar-brand {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.similar-name {
+    font-size: 0.9rem;
+}
+
+.similar-type {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.similar-reason {
+    color: var(--ink-2);
+    font-size: 0.75rem;
+    margin-top: 0.35rem;
+    /* one line only - the reason is a hint, not a spec sheet */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .similar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 1rem;
+    }
+
+    .similar-card img {
+        height: 90px;
+    }
+}
+
+.similar-card-loading {
+    cursor: default;
+}
+
+    .similar-card-loading:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+.similar-skeleton-image {
+    width: 70%;
+    height: 110px;
+    margin: 0 auto 0.6rem;
+}
+
+.similar-skeleton-line {
+    height: 0.7rem;
+    width: 70%;
+    margin: 0 auto 0.4rem;
+}
+
+    .similar-skeleton-line.short {
+        width: 45%;
+    }
+
+@media (max-width: 768px) {
+    .similar-skeleton-image {
+        height: 90px;
+    }
+}

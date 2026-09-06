@@ -114,78 +114,137 @@
 
 .search-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: background 1s ease-in-out;
-    background: rgba(17, 17, 17, 0.25);
-    backdrop-filter: blur(2px);
+    inset: 0;
+    background: rgba(17, 17, 17, 0.35);
+    backdrop-filter: blur(3px);
     z-index: 2000;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 5rem;
+    padding: 7rem 1rem 2rem;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
+
     .search-overlay.fade-in {
         opacity: 1;
     }
+
     .search-overlay.fade-out {
         opacity: 0;
     }
 
 .search-box {
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 640px;
     background: var(--surface);
-    padding: 1rem;
+    padding: 0.75rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    /* slide down a touch behind the fade, so the panel arrives instead of blinking in */
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
 }
+
+    .search-overlay.fade-in .search-box {
+        transform: translateY(0);
+    }
 
     .search-box input {
         width: 100%;
         box-sizing: border-box;
-        padding: 0.8rem 1rem;
-        font-size: 1rem;
-        border: 1px solid var(--line-strong);
+        padding: 0.85rem 1rem;
+        font-size: 1.05rem;
+        color: var(--ink);
+        background: var(--tint);
+        border: 1px solid var(--line);
         border-radius: 10px;
-        transition: border-color var(--ease);
-    }    
+        transition: border-color var(--ease), background-color var(--ease);
+    }
+
+    .search-box input::placeholder {
+        color: var(--ink-2);
+    }
+
     .search-box input:focus {
         outline: none;
+        background: var(--surface);
         border-color: var(--ink);
     }
 
 .search-results {
     list-style: none;
-    margin-top: 1rem;
-    padding-left: 0rem;
+    margin: 0.75rem 0 0.25rem;
+    padding: 0;
     text-align: left;
-    margin-bottom: 5px;
-    max-height: 40vh;
+    max-height: 55vh;
     overflow-y: auto;
-    overflow-x: hidden;
+    overscroll-behavior: contain;
 }
 
-    .search-results li {
+    /* no rule above the first row - it would read as a second border under the input */
+    .search-results li + li {
         border-top: 1px solid var(--line);
     }
 
-        .search-results li a {
-            display: block;
-            padding: 0.5rem 0.6rem;
-            border-radius: 8px;
-            color: var(--ink);
-            font-weight: normal;
-            transition: background-color var(--ease);
-        }
+    .search-results li a {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.6rem 0.7rem;
+        border-radius: 8px;
+        color: var(--ink);
+        font-weight: normal;
+        transition: background-color var(--ease);
+    }
 
-        .search-results li a:hover {
-            background-color: var(--tint);
-        }
+    .search-results li a:hover {
+        background-color: var(--tint);
+    }
 
+    /* results already on screen dim while a newer query is in flight */
+    .search-results.is-stale {
+        opacity: 0.45;
+        transition: opacity var(--ease);
+    }
 
+    /* placeholder rows reuse the gallery's shimmer, so loading looks the same everywhere */
+    .search-skeleton {
+        display: block;
+        height: 1.05rem;
+        margin: 0.75rem 0.7rem;
+        width: 60%;
+    }
 
+    .search-results li:nth-child(2) .search-skeleton {
+        width: 45%;
+    }
+
+    .search-results li:nth-child(3) .search-skeleton {
+        width: 52%;
+    }
+
+.search-result-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-result-brand {
+    font-weight: 500;
+}
+
+.search-result-type {
+    flex: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+}
+
+.search-note {
+    margin: 0;
+    padding: 1.1rem 0.7rem 0.85rem;
+    color: var(--ink-2);
+    font-size: 0.9rem;
+    text-align: left;
+}

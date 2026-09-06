@@ -4,22 +4,48 @@ import './Compare.css';
 import SwitchImage from './SwitchImage';
 import { FIELDS, hasValue } from './switchFields';
 
-function SwitchPicker({ placeholder, selected, onSelect }) {
+function SwitchPicker({ placeholder, selected, loading, onSelect }) {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
+    const [searching, setSearching] = useState(false);
     // only true once "Change" has been clicked, so the page doesn't grab focus on load
     const [focusInput, setFocusInput] = useState(false);
 
+    // same deal as the nav search: wait for a pause in typing, drop superseded replies
     useEffect(() => {
         if (query.trim() === '') {
             setResults([]);
+            setSearching(false);
             return;
         }
-        fetch(`/api/mxswitch/search?query=${encodeURIComponent(query)}`)
-            .then(res => res.json())
-            .then(data => setResults(data))
-            .catch(() => setResults([]));
+
+        setSearching(true);
+        let live = true;
+        const timer = setTimeout(() => {
+            fetch(`/api/mxswitch/search?query=${encodeURIComponent(query)}`)
+                .then(res => res.json())
+                .catch(() => [])
+                .then(data => {
+                    if (!live) return;
+                    setResults(data);
+                    setSearching(false);
+                });
+        }, 200);
+
+        return () => {
+            live = false;
+            clearTimeout(timer);
+        };
     }, [query]);
+
+    if (loading) {
+        return (
+            <div className="compare-slot" aria-label="Loading switch">
+                <div className="skeleton compare-slot-skeleton" />
+                <div className="skeleton compare-slot-line" />
+            </div>
+        );
+    }
 
     if (selected) {
         return (
@@ -42,6 +68,11 @@ function SwitchPicker({ placeholder, selected, onSelect }) {
                 onChange={(e) => setQuery(e.target.value)}
             />
             <ul className="compare-results">
+                {searching && results.length === 0 && [0, 1, 2].map(i => (
+                    <li key={`compare-skeleton-${i}`} aria-hidden="true">
+                        <span className="skeleton compare-result-skeleton" />
+                    </li>
+                ))}
                 {results.map((sw) => (
                     <li key={sw.id}>
                         <button onClick={() => { onSelect(sw.id); setQuery(''); }}>
@@ -57,24 +88,27 @@ function SwitchPicker({ placeholder, selected, onSelect }) {
 function Compare() {
     const [left, setLeft] = useState(null);
     const [right, setRight] = useState(null);
+    const [loading, setLoading] = useState({ left: false, right: false });
 
-    const pick = (setter) => (id) => {
+    const pick = (slot, setter) => (id) => {
         if (id == null) {
             setter(null);
             return;
         }
+        setLoading(prev => ({ ...prev, [slot]: true }));
         fetch(`/api/mxswitch/${id}`)
             .then(res => res.json())
             .then(setter)
-            .catch(err => console.error("Error fetching switch:", err));
+            .catch(err => console.error("Error fetching switch:", err))
+            .finally(() => setLoading(prev => ({ ...prev, [slot]: false })));
     };
 
     return (
         <div className="page-container">
             <h1>Compare Switches</h1>
             <div className="compare-slots">
-                <SwitchPicker placeholder="Search switches..." selected={left} onSelect={pick(setLeft)} />
-                <SwitchPicker placeholder="Search switches..." selected={right} onSelect={pick(setRight)} />
+                <SwitchPicker placeholder="Search switches..." selected={left} loading={loading.left} onSelect={pick('left', setLeft)} />
+                <SwitchPicker placeholder="Search switches..." selected={right} loading={loading.right} onSelect={pick('right', setRight)} />
             </div>
 
             {(left || right) && (

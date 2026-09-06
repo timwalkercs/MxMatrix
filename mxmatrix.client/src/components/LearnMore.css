@@ -159,6 +159,8 @@
 }
 
 .type-card {
+    /* these cards share the .type-* classes with the badges, but only their heading takes the colour */
+    color: var(--ink);
     padding: 1.25rem;
     border: 1px solid var(--line);
     border-top: 3px solid var(--line-strong);

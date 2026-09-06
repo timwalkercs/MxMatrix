@@ -149,9 +149,13 @@ namespace MxMatrix.Data.Controllers
 
             var results = await _context.Switches
                 .Where(s => (s.Brand + " " + s.Name).ToLower().Contains(query))
-                .OrderBy(s => s.Brand)
-                .Select(s => new { s.Id, s.Brand, s.Name })
-                .Take(10)
+                // a switch that starts with what was typed is the likelier target than one that
+                // only mentions it somewhere in the middle
+                .OrderBy(s => (s.Brand + " " + s.Name).ToLower().StartsWith(query) ? 0 : 1)
+                .ThenBy(s => s.Brand)
+                .ThenBy(s => s.Name)
+                .Select(s => new { s.Id, s.Brand, s.Name, s.Type })
+                .Take(20)
                 .ToListAsync();
 
             return Ok(results);

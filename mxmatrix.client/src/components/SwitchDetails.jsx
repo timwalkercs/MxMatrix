@@ -5,19 +5,46 @@ import ForceComparisonBar from '../components/ForceComparisonBar';
 import TravelComparisonBar from '../components/TravelComparisonBar';
 import { FIELDS, hasValue } from './switchFields';
 import SwitchImage from './SwitchImage';
+import SimilarSwitches from './SimilarSwitches';
 
 function SwitchDetail() {
     const { id } = useParams();
     const [switchData, setSwitchData] = useState(null);
+    const [failed, setFailed] = useState(false);
 
     useEffect(() => {
         fetch(`/api/mxswitch/${id}`)
             .then(res => res.json())
             .then(setSwitchData)
-            .catch(err => console.error("Error fetching switch:", err));
+            .catch(err => {
+                console.error("Error fetching switch:", err);
+                setFailed(true);
+            });
     }, [id]);
 
-    if (!switchData) return <p>Loading...</p>;
+    if (failed) return (
+        <div className="page-container">
+            <p>That switch could not be loaded. Please try again.</p>
+        </div>
+    );
+
+    // stand-in for the card's two halves, so the page keeps its shape while the switch loads
+    if (!switchData) return (
+        <div className="page-container">
+            <div className="switch-card">
+                <div className="switch-image">
+                    <div className="skeleton detail-image-skeleton" />
+                </div>
+                <div className="switch-info">
+                    <div className="detail-table-skeleton">
+                        {Array.from({ length: 9 }, (_, i) => (
+                            <div key={`detail-skeleton-${i}`} className="skeleton" />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 
     return (
         <div>
@@ -48,11 +75,7 @@ function SwitchDetail() {
                         </table>
                     </div>
                 </div>
-                {(switchData.bottomOutForce !== null || switchData.totalTravel !== null) && (
-                    <div className="comparison-header">
-                        <h2>How this switch compares...</h2>
-                    </div>
-                )}
+
                 <div className="bar-wrapper">
                     {switchData.bottomOutForce !== null && (
                         <ForceComparisonBar currentForce={switchData.bottomOutForce} />
@@ -61,6 +84,7 @@ function SwitchDetail() {
                         <TravelComparisonBar currentTotalTravel={switchData.totalTravel} />
                     )}
                 </div>
+                <SimilarSwitches current={switchData} />
             </div>
         </div>
     );

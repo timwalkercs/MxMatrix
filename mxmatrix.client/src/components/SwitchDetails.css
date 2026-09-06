@@ -236,3 +236,22 @@
         visibility: visible;
         opacity: 1;
     }
+
+.detail-image-skeleton {
+    width: 70%;
+    aspect-ratio: 3 / 2;
+}
+
+.detail-table-skeleton {
+    width: 100%;
+}
+
+    .detail-table-skeleton > div {
+        height: 2.65rem;
+        margin-bottom: 0.35rem;
+    }
+
+    /* the header row sits taller than the spec rows it covers */
+    .detail-table-skeleton > div:first-child {
+        height: 3.4rem;
+    }

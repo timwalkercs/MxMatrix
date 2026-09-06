@@ -111,6 +111,23 @@
     opacity: 1;
 }
 
+/* placeholder tiles in the carousel's footprint, so the page doesn't jump when photos land */
+.carousel-loading {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: min(90vw, 1200px);
+    height: 200px;
+    margin: auto;
+    overflow: clip;
+}
+
+    .carousel-loading > div {
+        flex: none;
+        width: 240px;
+        height: 200px;
+    }
+
 .carousel {
     --items: 5;
     --carousel-duration: 20s;

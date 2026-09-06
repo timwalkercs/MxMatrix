@@ -25,6 +25,19 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* switch type colour code, used by the gallery, the search results and the detail page */
+.type-linear {
+    color: var(--linear);
+}
+
+.type-tactile {
+    color: var(--tactile);
+}
+
+.type-clicky {
+    color: var(--clicky);
+}
+
 html {
     scroll-behavior: smooth;
 }

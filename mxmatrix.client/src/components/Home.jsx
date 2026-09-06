@@ -20,6 +20,7 @@ const imageLoads = (src) => new Promise((resolve) => {
 
 function Home() {
     const [recentSwitches, setRecentSwitches] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         let cancelled = false;
         fetch('/api/mxswitch/recent')
@@ -37,6 +38,10 @@ function Home() {
             .catch(err => {
                 console.error('Error fetching recent switches:', err);
                 setRecentSwitches([]); // Fallback to empty
+            })
+            // the wait covers the fetch and the image probing that follows it
+            .finally(() => {
+                if (!cancelled) setLoading(false);
             });
         return () => { cancelled = true; };
     }, []);
@@ -71,6 +76,13 @@ function Home() {
             </Link>
 
             <h2>Recently Added Switches</h2>
+            {loading ? (
+                <div className="carousel-loading" aria-label="Loading recently added switches">
+                    {Array.from({ length: CAROUSEL_SIZE }, (_, i) => (
+                        <div key={`recent-skeleton-${i}`} className="skeleton" />
+                    ))}
+                </div>
+            ) : (
             <div className="carousel" style={{ '--items': recentSwitches.length }}>
                 {recentSwitches.map((s, idx) => (
                     <div key={s.id} style={{ '--i': idx }}>
@@ -85,6 +97,7 @@ function Home() {
                     </div>
                 ))}
             </div>
+            )}
 
         </div>
     );

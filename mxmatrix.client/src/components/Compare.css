@@ -148,3 +148,31 @@
         white-space: normal;
     }
 }
+
+/* stand-ins while a picked switch loads: the photo block and its name line */
+.compare-slot-skeleton {
+    height: 8rem;
+    width: 60%;
+    margin: 0 auto 1rem;
+}
+
+.compare-slot-line {
+    height: 1.1rem;
+    width: 55%;
+    margin: 0 auto 0.75rem;
+}
+
+.compare-result-skeleton {
+    display: block;
+    height: 1rem;
+    width: 70%;
+    margin: 0.7rem auto;
+}
+
+.compare-results li:nth-child(2) .compare-result-skeleton {
+    width: 50%;
+}
+
+.compare-results li:nth-child(3) .compare-result-skeleton {
+    width: 60%;
+}
